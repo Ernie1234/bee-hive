@@ -6,7 +6,7 @@ export default function Philosophy() {
   return (
     <div className="my-16">
       <h2 className="text-[#ffba00] text-5xl text-center font-primary font-semibold">
-        OVERVIEW
+        PHILOSOPHY
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 mt-6">
         <div className="flex gap-4 hover:bg-slate-900 rounded-lg p-4 transition-all duration-500">

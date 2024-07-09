@@ -1,8 +1,7 @@
 import { PartyPopper } from "lucide-react";
-import { FaHandHoldingUsd } from "react-icons/fa";
 import { FaHandshakeSimple } from "react-icons/fa6";
-import { GiCamel, GiLoveMystery } from "react-icons/gi";
-import { PiHandshakeFill, PiHeadCircuitFill } from "react-icons/pi";
+import { GiLoveMystery } from "react-icons/gi";
+import { PiHeadCircuitFill } from "react-icons/pi";
 import { RiHandCoinFill } from "react-icons/ri";
 
 export default function Value() {
