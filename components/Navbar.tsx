@@ -21,10 +21,10 @@ export default function Navbar() {
   return (
     <nav
       className={`sticky bg-darkBlue top-0 z-50 px-2 py-4 transition-all duration-300 ease-out bg-foreground ${
-        inView && "shadow-md"
+        inView && "shadow-lg"
       }`}
     >
-      <div className="container w-full px-5 md:max-w-[63rem] mx-auto flex justify-between items-center text-primary-foreground  font-display">
+      <div className="container w-full px-5 md:max-w-[63rem] mx-auto flex justify-between items-center text-primary-foreground font-display">
         <p>logo</p>
         <div className="flex gap-5">
           <Link href="/coach" className="capitalize">
