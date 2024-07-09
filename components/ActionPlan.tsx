@@ -2,7 +2,7 @@ import { Separator } from "./ui/separator";
 
 export default function ActionPlan() {
   return (
-    <div className="my-16 sm:mt-24 md:mt-28">
+    <div className="my-20 sm:mt-24 md:mt-28">
       <div className="flex justify-center flex-col items-center">
         <h2 className="text-[#ffba00] text-5xl font-primary font-semibold">
           ACTION PLAN
@@ -24,12 +24,7 @@ export default function ActionPlan() {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-20 mt-8">
         <div className="flex flex-col gap-3">
-          <div
-            className="text-5xl
-          "
-          >
-            🏗️
-          </div>
+          <div className="text-5xl">🏗️</div>
           <h5 className="text-3xl font-primary capitalize">
             Stakeholder Building
           </h5>
@@ -38,12 +33,7 @@ export default function ActionPlan() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <div
-            className="text-5xl
-          "
-          >
-            🛰️
-          </div>
+          <div className="text-5xl">🛰️</div>
           <h5 className="text-3xl font-primary capitalize">
             Co-Working Space Upgrade
           </h5>
@@ -53,12 +43,7 @@ export default function ActionPlan() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <div
-            className="text-5xl
-          "
-          >
-            🥇
-          </div>
+          <div className="text-5xl">🥇</div>
           <h5 className="text-3xl font-primary capitalize">
             First-Mix Cohort 10 Startups
           </h5>
@@ -68,12 +53,7 @@ export default function ActionPlan() {
           </p>
         </div>
         <div className="flex flex-col gap-3">
-          <div
-            className="text-5xl
-          "
-          >
-            🚀
-          </div>
+          <div className="text-5xl">🚀</div>
           <h5 className="text-3xl font-primary capitalize">Official Launch</h5>
           <p className="text-xl text-amber-100 font-display">
             Between August and December, we want to get partners and network.

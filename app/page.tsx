@@ -1,4 +1,6 @@
 import ActionPlan from "@/components/ActionPlan";
+import BuildWithUs from "@/components/BuildWithUs";
+import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Model from "@/components/Model";
 import Overview from "@/components/Overview";
@@ -9,7 +11,7 @@ import Value from "@/components/Value";
 
 export default function Home() {
   return (
-    <h1 className="font-exo">
+    <main className="font-exo border-b-2">
       <div className="container w-full px-5 md:max-w-[63rem] mx-auto">
         <Header />
         <Overview />
@@ -24,7 +26,11 @@ export default function Home() {
         <Philosophy />
         <Value />
         <ActionPlan />
+        <BuildWithUs />
       </div>
-    </h1>
+      <div className="container border-t-2 p-5">
+        <Footer />
+      </div>
+    </main>
   );
 }
