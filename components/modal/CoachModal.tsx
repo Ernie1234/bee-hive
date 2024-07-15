@@ -1,13 +1,14 @@
 "use client";
 
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import Modal from "./Modal";
 import { useMemo, useState, useTransition } from "react";
-import { useCoachModalStore } from "@/hooks/use-coach-modal";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+
+import { toast } from "../ui/use-toast";
+import Modal from "./Modal";
 import AppInput from "./AppInput";
 import { options } from "@/lib/data";
 import { createCoach } from "@/actions/coach";
-import { toast } from "../ui/use-toast";
+import { useCoachModalStore } from "@/hooks/use-coach-modal";
 
 enum STEPS {
   COACH_NAME = 0,
@@ -122,6 +123,7 @@ const CoachModal = () => {
           });
         }
       });
+      reset();
     });
   };
 
