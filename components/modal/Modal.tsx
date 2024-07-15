@@ -101,7 +101,11 @@ const Modal = ({
                       {secondaryActionLabel}
                     </Button>
                   )}
-                  <Button disabled={disabled} onClick={handleSubmit}>
+                  <Button
+                    type="submit"
+                    disabled={disabled}
+                    onClick={handleSubmit}
+                  >
                     {actionLabel}
                   </Button>
                 </div>

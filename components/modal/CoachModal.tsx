@@ -2,9 +2,12 @@
 
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Modal from "./Modal";
-import { useMemo, useState } from "react";
+import { useMemo, useState, useTransition } from "react";
 import { useCoachModalStore } from "@/hooks/use-coach-modal";
 import AppInput from "./AppInput";
+import { options } from "@/lib/data";
+import { createCoach } from "@/actions/coach";
+import { toast } from "../ui/use-toast";
 
 enum STEPS {
   COACH_NAME = 0,
@@ -16,66 +19,16 @@ enum STEPS {
   COACH_INTEREST = 6,
 }
 
-const options = [
-  { value: "Financial_Management", label: "Financial Management" },
-  {
-    value: "Business_Strategy_and_Planning",
-    label: "Business Strategy and Planning",
-  },
-  { value: "Marketing_and_Branding", label: "Marketing and Branding" },
-  {
-    value: "Sales_and_Business_Development",
-    label: "Sales and Business Development",
-  },
-  {
-    value: "Product_Development",
-    label: "Product Development",
-  },
-  {
-    value: "Product_Management",
-    label: "Product Management",
-  },
-  {
-    value: "Technology_and_Innovation",
-    label: "Technology and Innovation",
-  },
-  {
-    value: "Operations_and_Supply_Chain_Management",
-    label: "Operations and Supply Chain Management",
-  },
-  {
-    value: "Legal_and_Compliance",
-    label: "Legal and Compliance",
-  },
-  {
-    value: "Human_Resources_and_Talent_Management",
-    label: "Human Resources and Talent Management",
-  },
-  {
-    value: "Pitching_and_Presentation_Skills",
-    label: "Pitching and Presentation Skills",
-  },
-  {
-    value: "Growth_Hacking_and_Scaling",
-    label: "Growth Hacking and Scaling",
-  },
-  {
-    value: "Customer_Experience_and_Service",
-    label: "Customer Experience and Service",
-  },
-];
-
 const CoachModal = () => {
+  const [isPending, startTransition] = useTransition();
   const [step, setStep] = useState(STEPS.COACH_NAME);
-  const [isLoading, setIsLoading] = useState(false);
 
   const modal = useCoachModalStore();
 
   const {
+    reset,
     register,
     handleSubmit,
-    setValue,
-    watch,
     formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
@@ -88,16 +41,14 @@ const CoachModal = () => {
     },
   });
 
-  const expertise = watch("expertise");
-
-  const setCustomValue = (id: string, value: any) => {
-    setValue(value, {
-      shouldDirty: true,
-      shouldTouch: true,
-      shouldValidate: true,
-      validate: (value: string) => value.length > 0,
-    });
-  };
+  // const setCustomValue = (id: string, value: any) => {
+  //   setValue(value, {
+  //     shouldDirty: true,
+  //     shouldTouch: true,
+  //     shouldValidate: true,
+  //     validate: (value: string) => value.length > 0,
+  //   });
+  // };
 
   const onBack = () => {
     if (step !== STEPS.COACH_NAME) setStep((value) => value - 1);
@@ -138,10 +89,40 @@ const CoachModal = () => {
     return "And finally! Why are you interested in coaching at The Hive Incubator?";
   }, [step]);
 
-  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+  const onSubmit: SubmitHandler<FieldValues> = async (values) => {
     if (step !== STEPS.COACH_INTEREST) return onNext();
+    const trueObj = values.options;
 
-    console.log(data);
+    const expertise = Object.entries(trueObj)
+      .filter(([, value]) => value)
+      .map(([key]) => key);
+
+    const data = {
+      name: values.fullName,
+      email: values.email,
+      phone: values.phone,
+      role: values.role,
+      url: values.url,
+      interest: values.interest,
+    };
+    const formData = { ...data, expertise };
+
+    return startTransition(() => {
+      console.log(formData);
+      createCoach(formData).then((data) => {
+        if (data?.error) {
+          toast({
+            description: data.error,
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            description: data.success,
+            variant: "default",
+          });
+        }
+      });
+    });
   };
 
   let bodyContent = (
@@ -149,7 +130,7 @@ const CoachModal = () => {
       <AppInput
         id="fullName"
         label="Fullname"
-        disabled={isLoading}
+        disabled={isPending}
         errors={errors}
         register={register}
         required
@@ -162,7 +143,7 @@ const CoachModal = () => {
         <AppInput
           id="email"
           label="Type your answer here..."
-          disabled={isLoading}
+          disabled={isPending}
           errors={errors}
           register={register}
           required
@@ -176,7 +157,7 @@ const CoachModal = () => {
         <AppInput
           id="phone"
           label="Type your answer here..."
-          disabled={isLoading}
+          disabled={isPending}
           errors={errors}
           register={register}
           required
@@ -190,7 +171,7 @@ const CoachModal = () => {
         <AppInput
           id="role"
           label="Type your answer here..."
-          disabled={isLoading}
+          disabled={isPending}
           errors={errors}
           register={register}
           required
@@ -204,7 +185,7 @@ const CoachModal = () => {
         <AppInput
           id="url"
           label="Type your answer here..."
-          disabled={isLoading}
+          disabled={isPending}
           errors={errors}
           register={register}
           required
@@ -237,7 +218,7 @@ const CoachModal = () => {
         <AppInput
           id="interest"
           label="Type your answer here..."
-          disabled={isLoading}
+          disabled={isPending}
           errors={errors}
           register={register}
           required
@@ -248,15 +229,15 @@ const CoachModal = () => {
 
   return (
     <Modal
-      disabled={false}
+      disabled={isPending}
       isOpen={modal.isOpen}
       title={title}
       actionLabel={actionLabel}
       onClose={modal.onClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
-      secondaryAction={step === STEPS.COACH_NAME ? undefined : onBack}
-      secondaryActionLabel={secondaryActionLabel}
+      // secondaryAction={step === STEPS.COACH_NAME ? undefined : onBack}
+      // secondaryActionLabel={secondaryActionLabel}
     />
   );
 };
