@@ -48,22 +48,29 @@ const AppInput = ({
           w-full        
           pt-6 
           font-light 
-          bg-transparent 
+          bg-transparent
+          focus:bg-transparent
+          focus-visible:bg-transparent
+          peer-focus:bg-transparent
+          peer-active:bg-transparent
+          peer-focus-within:bg-transparent
+          active:bg-transparent
           border-b-2
           outline-none
           transition
-          cursor-text
           disabled:opacity-70
           disabled:cursor-not-allowed
           ${formatPrice ? "pl-9" : "pl-0"}
           ${errors[id] ? "border-rose-500" : "border-neutral-300"}
           ${errors[id] ? "focus:border-rose-500" : "focus:border-gray-400"}
+        
         `}
       />
       <label
-        className={`
+        className={`          
           absolute 
           text-lg
+          pointer-events-none
           duration-150 
           transform 
           -translate-y-3 
