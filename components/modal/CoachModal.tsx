@@ -204,7 +204,7 @@ const CoachModal = () => {
               {...register(`options.${option.value}`, { required: false })}
               className="mr-2 h-4 w-4 rounded border-gray-300 bg-gray-100 text-blue-600 focus:ring-2 focus:ring-blue-500"
             />
-            <label htmlFor={option.value} className="text-gray-700">
+            <label htmlFor={option.value} className="text-background">
               {option.label}
             </label>
           </div>

@@ -39,10 +39,10 @@ interface ICoach {
 export default function Admin({ coaches }: ICoach) {
   const [tableType, setTableType] = useState(TYPE.COACH);
   return (
-    <div>
+    <div className="py-8">
       <div className="">
-        <h1>Admin Dashboard</h1>
-        <div className="flex gap-6 justify-center">
+        <h1 className="text-4xl text-center">Admin Dashboard</h1>
+        <div className="flex gap-6 justify-center mt-4">
           <div
             className={cn(
               tableType === TYPE.ENTREPRENEUR

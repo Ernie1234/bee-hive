@@ -6,7 +6,7 @@ const page = async () => {
   console.log(coaches);
 
   if (coaches.length === 0 || null) {
-    return <div className="mt-16 mx-auto text-xl">No commodity in store</div>;
+    return <div className="mt-16 mx-auto text-xl">No Coaches yet!</div>;
   }
   return <Admin coaches={coaches} />;
 };
