@@ -22,12 +22,12 @@ export default function Header() {
         >
           Join Us
         </Link>
-        <Link
+        {/* <Link
           href="/coach"
           className="border-2 border-background hover:bg-background text-background hover:text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 w-full text-center min-w-max"
         >
           Get started
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

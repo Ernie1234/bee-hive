@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Exo, Raleway } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +32,6 @@ export default function RootLayout({
       <body
         className={`${exo.variable} ${raleway.variable} bg-foreground text-background`}
       >
-        <Navbar />
         {children}
       </body>
     </html>

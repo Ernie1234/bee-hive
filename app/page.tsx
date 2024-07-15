@@ -3,6 +3,7 @@ import BuildWithUs from "@/components/BuildWithUs";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Model from "@/components/Model";
+import Navbar from "@/components/Navbar";
 import Overview from "@/components/Overview";
 import Philosophy from "@/components/Philosophy";
 import Problem from "@/components/Problem";
@@ -12,6 +13,7 @@ import Value from "@/components/Value";
 export default function Home() {
   return (
     <main className="font-exo border-b-2">
+      <Navbar />
       <div className="container w-full px-5 md:max-w-[63rem] mx-auto">
         <Header />
         <Overview />
