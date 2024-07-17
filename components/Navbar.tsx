@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -25,7 +26,15 @@ export default function Navbar() {
       }`}
     >
       <div className="container w-full px-5 md:max-w-[63rem] mx-auto flex justify-between items-center text-primary-foreground font-display">
-        <p>logo</p>
+        <Link href="/">
+          <Image
+            alt="logo"
+            src="/images/Logo.png"
+            className="w-12 lg:w-14"
+            width={100}
+            height={100}
+          />
+        </Link>
         <div className="flex gap-5">
           {/* <Link href="/coach" className="capitalize">
             join us

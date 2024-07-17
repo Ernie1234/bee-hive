@@ -24,7 +24,7 @@ export default function BuildWithUs() {
         <div className="flex-1 flex  justify-center items-center lg:items-start lg:justify-start">
           <div className="flex flex-col lg:flex-row w-full gap-5">
             <Image
-              src="/images/build_with_us.jpg"
+              src="/images/building.png"
               alt="Overview"
               // layout="fill"
               objectFit="cover"

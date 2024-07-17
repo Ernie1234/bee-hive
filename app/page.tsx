@@ -24,10 +24,10 @@ export default function Home() {
           </h2>
           <Solution />
         </div>
-        <Model />
+        {/* <Model /> */}
         <Philosophy />
         <Value />
-        <ActionPlan />
+        {/* <ActionPlan /> */}
         <BuildWithUs />
       </div>
       <div className="container border-t-2 p-5">

@@ -14,7 +14,7 @@ export default function Solution() {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-5 bg-gray-900/60 rounded-3xl p-0 lg:p-5">
+    <div className="grid grid-cols-3 gap-1 bg-gray-900/60 rounded-3xl p-0 lg:p-5">
       <div className="col-span-3 w-full lg:col-start-1 lg:col-end-2 p-0 lg:p-3 flex flex-row justify-center lg:flex-col gap-0 lg:gap-3 shadow-sm rounded-md">
         <div
           className={`flex space-x-0 md:space-x-6 p-3 rounded-none lg:rounded-md items-center justify-center lg:justify-normal transition-all duration-500 w-full ${
