@@ -22,20 +22,11 @@ export default function BuildWithUs() {
           </p>
         </div>
         <div className="flex-1 flex  justify-center items-center lg:items-start lg:justify-start">
-          <div className="flex flex-col lg:flex-row w-2/3 gap-5">
+          <div className="flex flex-col lg:flex-row w-full gap-5">
             <Image
-              src="https://images.pexels.com/photos/1181498/pexels-photo-1181498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              src="/images/build_with_us.jpg"
               alt="Overview"
               // layout="fill"
-              objectFit="cover"
-              quality={100}
-              width={500}
-              height={500}
-            />
-            <Image
-              src="https://images.pexels.com/photos/7213218/pexels-photo-7213218.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="hidden xl:block"
-              alt="Overview"
               objectFit="cover"
               quality={100}
               width={500}

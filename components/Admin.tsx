@@ -10,34 +10,17 @@ import {
   TableHeader,
   TableRow,
 } from "./ui/table";
-
 import { cn } from "@/lib/utils";
-
-enum TYPE {
-  ENTREPRENEUR,
-  COACH,
-}
-
-type TCoaches = {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  role: string;
-  url: string;
-  type: string;
-  expertise: string[];
-  interest: string;
-  createdAt: Date;
-  updatedAt: Date;
-};
+import { IEntrepreneur, TCoaches, TYPE } from "@/lib/data";
+import Row from "./Row";
 
 interface ICoach {
   coaches: TCoaches[];
+  entre: IEntrepreneur[];
 }
 
-export default function Admin({ coaches }: ICoach) {
-  const [tableType, setTableType] = useState(TYPE.COACH);
+export default function Admin({ coaches, entre }: ICoach) {
+  const [tableType, setTableType] = useState(TYPE.ENTREPRENEUR);
   return (
     <div className="py-8">
       <div className="">
@@ -65,6 +48,30 @@ export default function Admin({ coaches }: ICoach) {
           </div>
         </div>
       </div>
+      {tableType === TYPE.ENTREPRENEUR && (
+        <div className="mt-8 border-y border-muted-foreground">
+          <Table>
+            {/* <TableCaption>A list of your recent commodity.</TableCaption> */}
+            <TableHeader>
+              <TableRow>
+                <TableHead className="w-[100px] text-center">S/N</TableHead>
+                <TableHead>Name</TableHead>
+                <TableHead>Email</TableHead>
+                <TableHead>Business Name</TableHead>
+                <TableHead>Business Description</TableHead>
+                <TableHead>Stage</TableHead>
+                <TableHead>Phone</TableHead>
+                <TableHead>Experience</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody className="px-8">
+              {entre.map((item, index) => {
+                return <Row key={item.id} index={index} item={item} />;
+              })}
+            </TableBody>
+          </Table>
+        </div>
+      )}
       {tableType === TYPE.COACH && (
         <div className="mt-8 border-y border-muted-foreground">
           <Table>
@@ -79,7 +86,6 @@ export default function Admin({ coaches }: ICoach) {
                 <TableHead>Url</TableHead>
                 <TableHead>Role</TableHead>
                 <TableHead>Area of Expertise</TableHead>
-                <TableHead></TableHead>
               </TableRow>
             </TableHeader>
             <TableBody className="px-8">
@@ -118,7 +124,6 @@ export default function Admin({ coaches }: ICoach) {
           </Table>
         </div>
       )}
-      {/* {type === TYPE.ENTREPRENEUR && <Entrepreneur />} */}
     </div>
   );
 }

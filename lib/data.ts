@@ -46,3 +46,76 @@ export const options = [
     label: "Customer Experience and Service",
   },
 ];
+
+export interface IEntrepreneur {
+  id: string;
+  fullName: string;
+  email: string;
+  phone: string;
+  address: string;
+  bckGround: string;
+  experience: string;
+  businessName: string | null;
+  businessDesc: string | null;
+  businessAim: string | null;
+  businessTarget: string | null;
+  businessPlan: string | null;
+  stage: string | null;
+  teamMember: string | null;
+  teamMemberRole: string | null;
+  devPrototype: string | null;
+  businessFin: string | null;
+  businessFinDetails: string | null;
+  businessVal: string | null;
+  businessValDetails: string | null;
+  PrototypeTeamMember: string | null;
+  PrototypeTeamMemberRole: string | null;
+  prototyDevPrototype: string | null;
+  prototypeDevPrototypeDetails: string | null;
+  prototypeFin: string | null;
+  prototypeFinDetails: string | null;
+  prototypeFinProj: string | null;
+  prototypeFinProjDetails: string | null;
+  prototypeVal: string | null;
+  prototypeValDetails: string | null;
+  prototypeMarket: string | null;
+  prototypeMarketDetails: string | null;
+  GrowthTeamMember: string | null;
+  GrowtheeeTeamMemberRole: string | null;
+  growthDevPrototype: string | null;
+  growthDevPrototypeDetails: string | null;
+  GrowthFin: string | null;
+  GrowthFinDetails: string | null;
+  GrowthRevenue: string | null;
+  GrowthFinProj: string | null;
+  GrowthFinProjDetails: string | null;
+  GrowthVal: string | null;
+  GrowthValDetails: string | null;
+  GrowthMarket: string | null;
+  GrowthMarketDetails: string | null;
+  exp1: string | null;
+  exp2: string | null;
+  exp3: string | null;
+  info1: string | null;
+  info2: string | null;
+  type: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+export type TCoaches = {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  role: string;
+  url: string;
+  type: string;
+  expertise: string[];
+  interest: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+export enum TYPE {
+  ENTREPRENEUR,
+  COACH,
+}

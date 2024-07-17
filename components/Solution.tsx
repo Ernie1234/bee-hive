@@ -98,9 +98,9 @@ export default function Solution() {
                   </p>
                 </div>
               </div>
-              <div className="w-full sm:w-1/3 flex">
+              <div className="w-full sm:w-2/3 flex">
                 <Image
-                  src="https://images.pexels.com/photos/2698465/pexels-photo-2698465.jpeg"
+                  src="/images/coaching.png"
                   alt="coaching"
                   className="object-cover rounded-md"
                   width={500}
@@ -121,9 +121,9 @@ export default function Solution() {
                   </p>
                 </div>
               </div>
-              <div className="w-full sm:w-1/3 flex">
+              <div className="w-full sm:w-2/3 flex">
                 <Image
-                  src="https://images.pexels.com/photos/5428672/pexels-photo-5428672.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="/images/mentorship.png"
                   alt="mentor"
                   className="object-cover rounded-md"
                   width={500}
@@ -144,9 +144,9 @@ export default function Solution() {
                   </p>
                 </div>
               </div>
-              <div className="w-full sm:w-1/3 flex">
+              <div className="w-full sm:w-2/3 flex">
                 <Image
-                  src="https://images.pexels.com/photos/4829065/pexels-photo-4829065.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                  src="/images/co_working.png"
                   alt="coworking"
                   className="object-cover rounded-md"
                   width={500}
@@ -167,9 +167,9 @@ export default function Solution() {
                   </p>
                 </div>
               </div>
-              <div className="w-full sm:w-1/3 flex">
+              <div className="w-full sm:w-2/3 flex">
                 <Image
-                  src="https://images.pexels.com/photos/4386288/pexels-photo-4386288.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="/images/funding.png"
                   alt="funding"
                   className="object-cover rounded-md"
                   width={500}

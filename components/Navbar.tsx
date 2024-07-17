@@ -27,9 +27,9 @@ export default function Navbar() {
       <div className="container w-full px-5 md:max-w-[63rem] mx-auto flex justify-between items-center text-primary-foreground font-display">
         <p>logo</p>
         <div className="flex gap-5">
-          <Link href="/coach" className="capitalize">
+          {/* <Link href="/coach" className="capitalize">
             join us
-          </Link>
+          </Link> */}
           <Link href="/coach" className="capitalize text-[#ffba00]">
             Get started
           </Link>

@@ -12,3 +12,17 @@ export const getAllForm = async () => {
 
   return coach;
 };
+export const getAllEntrepreneur = async () => {
+  const entre = await db.entrepreneur.findMany({
+    orderBy: { createdAt: "desc" },
+  });
+
+  return entre;
+};
+export const getEntrepreneurById = async (id: string) => {
+  const entre = await db.entrepreneur.findUnique({
+    where: { id },
+  });
+
+  return entre;
+};

@@ -228,7 +228,6 @@ const EntrepreneurModal = () => {
           disabled={isPending}
           errors={errors}
           register={register}
-          required
         />
         <AppInput
           id="businessDesc"
