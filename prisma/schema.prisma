@@ -31,3 +31,59 @@ model Coach {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+model Entrepreneur {
+  id                           String   @id @default(auto()) @map("_id") @db.ObjectId
+  fullName                     String
+  email                        String   @unique
+  phone                        String
+  address                      String
+  bckGround                    String
+  experience                   String
+  businessName                 String?
+  businessDesc                 String?
+  businessAim                  String?
+  businessTarget               String?
+  businessPlan                 String?
+  stage                        String?
+  teamMember                   String?
+  teamMemberRole               String?
+  devPrototype                 String?
+  businessFin                  String?
+  businessFinDetails           String?
+  businessVal                  String?
+  businessValDetails           String?
+  PrototypeTeamMember          String?
+  PrototypeTeamMemberRole      String?
+  prototyDevPrototype          String?
+  prototypeDevPrototypeDetails String?
+  prototypeFin                 String?
+  prototypeFinDetails          String?
+  prototypeFinProj             String?
+  prototypeFinProjDetails      String?
+  prototypeVal                 String?
+  prototypeValDetails          String?
+  prototypeMarket              String?
+  prototypeMarketDetails       String?
+  GrowthTeamMember             String?
+  GrowtheeeTeamMemberRole      String?
+  growthDevPrototype           String?
+  growthDevPrototypeDetails    String?
+  GrowthFin                    String?
+  GrowthFinDetails             String?
+  GrowthRevenue                String?
+  GrowthFinProj                String?
+  GrowthFinProjDetails         String?
+  GrowthVal                    String?
+  GrowthValDetails             String?
+  GrowthMarket                 String?
+  GrowthMarketDetails          String?
+  exp1                         String?
+  exp2                         String?
+  exp3                         String?
+  info1                        String?
+  info2                        String?
+  type                         TYPE
+  createdAt                    DateTime @default(now())
+  updatedAt                    DateTime @updatedAt
+}

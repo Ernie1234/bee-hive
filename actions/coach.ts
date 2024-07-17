@@ -19,3 +19,23 @@ export const createCoach = async (values: any) => {
 
   return { success: "Successfully saved!" };
 };
+export const createEntre = async (values: any) => {
+  if (!values) return { error: "Invalids fields!" };
+
+  try {
+    const existingEmail = await db.entrepreneur.findUnique({
+      where: { email: values.email },
+    });
+    if (existingEmail) return { error: "Invalid fields!" };
+    await db.entrepreneur.create({
+      data: {
+        ...values,
+        type: "ENTREPRENEUR",
+      },
+    });
+    return { success: "Successfully saved!" };
+  } catch (error) {
+    console.log(error);
+    return { error: "Sorry! Something went wrong" };
+  }
+};

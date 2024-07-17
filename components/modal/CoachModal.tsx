@@ -232,6 +232,7 @@ const CoachModal = () => {
   return (
     <Modal
       disabled={isPending}
+      isPending={isPending}
       isOpen={modal.isOpen}
       title={title}
       actionLabel={actionLabel}

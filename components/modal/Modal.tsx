@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { X } from "lucide-react";
+import { Loader2, X } from "lucide-react";
 
 interface IModal {
   isOpen: boolean;
@@ -14,6 +14,7 @@ interface IModal {
   body?: React.ReactElement;
   actionLabel: string;
   disabled?: boolean;
+  isPending: boolean;
   secondaryAction?: () => void;
   secondaryActionLabel?: string;
 }
@@ -26,6 +27,7 @@ const Modal = ({
   body,
   actionLabel,
   disabled,
+  isPending,
   secondaryAction,
   secondaryActionLabel,
 }: IModal) => {
@@ -90,9 +92,9 @@ const Modal = ({
             </div>
             <div className="flex flex-col flex-1 justify-center items-center">
               <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto space-y-4">
-                <h1 className="text-2xl font-medium font-primary text-left">
+                <h3 className="text-2xl font-medium font-primary text-left">
                   {title}
-                </h1>
+                </h3>
 
                 {body}
                 <div className="flex flex-row items-center gap-4 w-full">
@@ -106,7 +108,14 @@ const Modal = ({
                     disabled={disabled}
                     onClick={handleSubmit}
                   >
-                    {actionLabel}
+                    {isPending ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />{" "}
+                        Loading...
+                      </>
+                    ) : (
+                      <>{actionLabel}</>
+                    )}
                   </Button>
                 </div>
               </div>
