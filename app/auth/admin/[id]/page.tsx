@@ -388,7 +388,7 @@ export default async function page({ params }: { params: { id: string } }) {
           )}
         </TableBody>
       </Table>
-      <EmailBtn />
+      <EmailBtn userEmail={entre.email} />
     </div>
   );
 }

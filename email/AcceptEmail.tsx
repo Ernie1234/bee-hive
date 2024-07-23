@@ -1,6 +1,6 @@
 import { Button, Html } from "@react-email/components";
 
-export default function EmailResponse() {
+export default function AcceptEmail() {
   return (
     <Html>
       <body>
@@ -8,7 +8,7 @@ export default function EmailResponse() {
         <p>
           Thank you for joining our community. We are excited to have you here.
         </p>
-        <Button href="https://bee-hive.com/login">Login</Button>
+        <Button href="https://bee-hive.vercel.app">back to Bee-hive</Button>
       </body>
     </Html>
   );
