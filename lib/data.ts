@@ -81,7 +81,7 @@ export interface IEntrepreneur {
   prototypeMarket: string | null;
   prototypeMarketDetails: string | null;
   GrowthTeamMember: string | null;
-  GrowtheeeTeamMemberRole: string | null;
+  GrowthTeamMemberRole: string | null;
   growthDevPrototype: string | null;
   growthDevPrototypeDetails: string | null;
   GrowthFin: string | null;
