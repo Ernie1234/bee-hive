@@ -9,7 +9,7 @@ export const ModalBtns = () => {
   const entreModal = useEntrepreneurModalStore();
 
   return (
-    <div className="flex gap-8 mt-8">
+    <div className="flex flex-col sm:flex-row gap-8 mt-8">
       <Button
         className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 w-full text-center"
         onClick={entreModal.onOpen}

@@ -22,6 +22,8 @@ export const createCoach = async (values: any) => {
 export const createEntre = async (values: any) => {
   if (!values) return { error: "Invalids fields!" };
 
+  console.log(values);
+
   try {
     const existingEmail = await db.entrepreneur.findUnique({
       where: { email: values.email },

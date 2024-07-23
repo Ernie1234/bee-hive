@@ -83,7 +83,7 @@ const EntrepreneurModal = () => {
       prototypeMarket: "No",
       prototypeMarketDetails: "",
       GrowthTeamMember: "",
-      GrowtheeeTeamMemberRole: "",
+      GrowthTeamMemberRole: "",
       growthDevPrototype: "No",
       growthDevPrototypeDetails: "",
       GrowthFin: "No",
@@ -317,7 +317,7 @@ const EntrepreneurModal = () => {
             />
             <AppInput
               id="teamMemberRole"
-              label="How many team members are currently involved in your startup?"
+              label="List the core team members and their roles"
               disabled={isPending}
               errors={errors}
               register={register}
@@ -627,6 +627,7 @@ const EntrepreneurModal = () => {
           </div>
         ) : (
           <div className="flex flex-col flex-wrap gap-4">
+            {/* here now */}
             <AppInput
               id="GrowthTeamMember"
               label="How many team members are currently involved in your startup?"
