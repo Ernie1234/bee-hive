@@ -122,7 +122,7 @@ const Modal = ({
             </div>
             <div className="w-3/12 p-6 hidden md:flex flex-col gap-3 bg-gray-300/20 backdrop-blur-md h-full justify-center shadow-md">
               <h1 className="text-3xl font-medium font-primary text-left">
-                Welcome to the Bee Hive Coach App!
+                Welcome to the Hive Incubator Coach App!
               </h1>
               <p className="text-base text-left font-medium font-primary">
                 Empowering Entrepreneurs for a Brighter Tomorrow
