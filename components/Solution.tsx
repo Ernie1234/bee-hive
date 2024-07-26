@@ -100,7 +100,7 @@ export default function Solution() {
               </div>
               <div className="w-full sm:w-2/5 flex">
                 <Image
-                  src="/images/coaching2.png"
+                  src="/images/Coaching2.png"
                   alt="coaching"
                   className="object-cover rounded-md"
                   width={500}
@@ -169,7 +169,7 @@ export default function Solution() {
               </div>
               <div className="w-full sm:w-2/3 flex">
                 <Image
-                  src="/images/funding2.png"
+                  src="/images/Funding2.png"
                   alt="funding"
                   className="object-cover rounded-md"
                   width={500}
