@@ -1,4 +1,6 @@
 import { ModalBtns } from "@/components/modal/ModalBtns";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -15,9 +17,20 @@ export default function page() {
         />
         <div className="absolute flex flex-col md:flex-row justify-center items-center top-0 left-0 right-0 bottom-0 bg-slate-950/90">
           <div className="w-full order-2 md:order-1 md:flex-1 flex flex-col justify-start items-center gap-4">
+            <div className="absolute z-40 top-8 left-8 text-white">
+              <Link href="/">
+                <Image
+                  alt="logo"
+                  src="/images/Logo.png"
+                  className="w-12 lg:w-14"
+                  width={100}
+                  height={100}
+                />
+              </Link>
+            </div>
             <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-medium font-primary text-center max-w-prose">
               Welcome to the Hive Incubator <br />
-              Coach App!
+              Application site.
             </h1>
             <p className="text-lg md:text-3xl text-left font-medium font-primary">
               Empowering Entrepreneurs for a Brighter Tomorrow

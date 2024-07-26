@@ -98,9 +98,9 @@ export default function Solution() {
                   </p>
                 </div>
               </div>
-              <div className="w-full sm:w-2/3 flex">
+              <div className="w-full sm:w-2/5 flex">
                 <Image
-                  src="/images/coaching.png"
+                  src="/images/coaching2.png"
                   alt="coaching"
                   className="object-cover rounded-md"
                   width={500}
@@ -121,9 +121,9 @@ export default function Solution() {
                   </p>
                 </div>
               </div>
-              <div className="w-full sm:w-2/3 flex">
+              <div className="w-full sm:w-3/5 flex">
                 <Image
-                  src="/images/mentorship.png"
+                  src="/images/Mentorship2.png"
                   alt="mentor"
                   className="object-cover rounded-md"
                   width={500}
@@ -169,7 +169,7 @@ export default function Solution() {
               </div>
               <div className="w-full sm:w-2/3 flex">
                 <Image
-                  src="/images/funding.png"
+                  src="/images/funding2.png"
                   alt="funding"
                   className="object-cover rounded-md"
                   width={500}

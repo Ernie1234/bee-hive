@@ -1,8 +1,8 @@
-import { getAllEntrepreneur, getAllForm } from "@/actions/admin";
+import { getAllEntrepreneur, getAllCoach } from "@/actions/admin";
 import Admin from "@/components/Admin";
 
 const page = async () => {
-  const coaches = await getAllForm();
+  const coaches = await getAllCoach();
   const entre = await getAllEntrepreneur();
 
   if (coaches.length === 0 || null) {

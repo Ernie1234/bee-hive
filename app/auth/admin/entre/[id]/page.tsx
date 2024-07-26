@@ -26,7 +26,7 @@ export default async function page({ params }: { params: { id: string } }) {
         <div className="flex gap-6 justify-center mt-4">
           <div
             className={cn(
-              "bg-muted-foreground/10 bg-none px-8 py-2 rounded-full cursor-pointer"
+              "bg-muted-foreground/10 bg-none px-8 py-2 rounded-full mb-8"
             )}
           >
             {entre.businessName}

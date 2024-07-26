@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { Loader2, X } from "lucide-react";
+import Link from "next/link";
 
 interface IModal {
   isOpen: boolean;
@@ -89,6 +90,17 @@ const Modal = ({
               onClick={handleClose}
             >
               <X />
+            </div>
+            <div className="absolute z-40 top-8 left-8 text-white">
+              <Link href="/">
+                <Image
+                  alt="logo"
+                  src="/images/Logo.png"
+                  className="w-12 lg:w-14"
+                  width={100}
+                  height={100}
+                />
+              </Link>
             </div>
             <div className="flex flex-col flex-1 justify-center items-center">
               <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto space-y-4">

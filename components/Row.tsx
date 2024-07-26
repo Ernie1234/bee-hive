@@ -15,7 +15,7 @@ export default function Row({ index, item }: Props) {
   return (
     <TableRow
       className="hover:cursor-pointer"
-      onClick={() => router.push(`/auth/admin/${item.id}`)}
+      onClick={() => router.push(`/auth/admin/entre/${item.id}`)}
     >
       <TableCell>
         <div className="flex flex-col justify-center items-center w-full h-full">

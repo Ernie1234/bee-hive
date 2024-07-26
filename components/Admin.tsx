@@ -13,6 +13,7 @@ import {
 import { cn } from "@/lib/utils";
 import { IEntrepreneur, TCoaches, TYPE } from "@/lib/data";
 import Row from "./Row";
+import CoachRow from "./CoachRow";
 
 interface ICoach {
   coaches: TCoaches[];
@@ -81,44 +82,16 @@ export default function Admin({ coaches, entre }: ICoach) {
                 <TableHead className="w-[100px] text-center">S/N</TableHead>
                 <TableHead>Name</TableHead>
                 <TableHead>Email</TableHead>
-                <TableHead>Interest</TableHead>
+                {/* <TableHead>Interest</TableHead> */}
                 <TableHead>Phone</TableHead>
-                <TableHead>Url</TableHead>
+                {/* <TableHead>Url</TableHead> */}
                 <TableHead>Role</TableHead>
                 <TableHead>Area of Expertise</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody className="px-8">
               {coaches.map((item, index) => {
-                return (
-                  <TableRow key={item.id}>
-                    <TableCell>
-                      <div className="flex flex-col justify-center items-center w-full h-full">
-                        <div className="font-medium text-center bg-blue-200/5 rounded-full min-w-max p-2">
-                          # {index + 1}
-                        </div>
-                      </div>
-                    </TableCell>
-                    <TableCell>{item.name}</TableCell>
-                    <TableCell>{item.email}</TableCell>
-                    <TableCell>{item.interest}</TableCell>
-                    <TableCell>{item.phone}</TableCell>
-                    <TableCell>{item.url}</TableCell>
-                    <TableCell>{item.role}</TableCell>
-                    <TableCell>
-                      <div className="flex flex-col">
-                        {item.expertise.map((exp) => {
-                          const result = exp.replace(/_/g, " ");
-                          return (
-                            <p className="" key={exp}>
-                              {result}
-                            </p>
-                          );
-                        })}
-                      </div>
-                    </TableCell>
-                  </TableRow>
-                );
+                return <CoachRow key={item.id} index={index} item={item} />;
               })}
             </TableBody>
           </Table>
