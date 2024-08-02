@@ -36,7 +36,9 @@ export default function BuildWithUs() {
         </div>
       </div>
       <div className="mt-40 mb-28 flex flex-col gap-8 justify-center items-center">
-        <p className="text-5xl font-primary">Let{"'"}s build together</p>
+        <p className="text-5xl font-primary text-center">
+          Your journey starts now — let{"'"}s take flight together.
+        </p>
         <Link
           href="/coach"
           className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 text-center"

@@ -39,8 +39,11 @@ export default function Navbar() {
           {/* <Link href="/coach" className="capitalize">
             join us
           </Link> */}
+          <Link href="/launch" className="capitalize text-white">
+            Launch Lab
+          </Link>
           <Link href="/coach" className="capitalize text-[#ffba00]">
-            Get started
+            Join Us
           </Link>
         </div>
       </div>
