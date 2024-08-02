@@ -1,4 +1,3 @@
-import BuildWithUs from "@/components/BuildWithUs";
 import Catalyst from "@/components/Catalyst";
 import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";

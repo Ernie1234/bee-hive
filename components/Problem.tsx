@@ -1,8 +1,5 @@
 import Image from "next/image";
 import { Separator } from "./ui/separator";
-import { Lightbulb } from "lucide-react";
-import { RiHandCoinFill } from "react-icons/ri";
-import { IoConstruct, IoShieldCheckmarkSharp } from "react-icons/io5";
 
 export default function Problem() {
   return (
