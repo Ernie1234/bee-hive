@@ -1,5 +1,6 @@
 import { getAllLaunchApplications } from "@/actions/admin";
 import LaunchAdmin from "@/components/LaunchAdmin";
+import Navbar from "@/components/Navbar";
 
 export default async function page() {
   const launch = await getAllLaunchApplications();

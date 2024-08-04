@@ -147,8 +147,8 @@ export default function page() {
           </div>
         </div>
         {/* Receive up to N3m in seed funding */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12 my-24">
-          <div className="hidden md:flex flex-1">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 mt-24 mb-6">
+          {/* <div className="hidden md:flex flex-1">
             <Image
               src="https://uploads-ssl.webflow.com/6392cc77dccb6e7e61c47fa1/6392cc77dccb6ee5efc47fb5_piggybank-min.png"
               alt="Overview"
@@ -158,7 +158,7 @@ export default function page() {
               width={500}
               height={500}
             />
-          </div>
+          </div> */}
           <div className="flex-1">
             <h2 className="text-[#ffba00] text-5xl font-primary font-semibold">
               Receive up to N3m in seed funding
