@@ -87,3 +87,25 @@ model Entrepreneur {
   createdAt                    DateTime @default(now())
   updatedAt                    DateTime @updatedAt
 }
+
+model Launch {
+  id                String @id @default(auto()) @map("_id") @db.ObjectId
+  fullName          String
+  email             String
+  phone             String
+  age               String
+  businessName      String
+  businessResidence String
+  businessIdea      String
+  businessAim       String
+  unique            String
+  problemSolving    String
+  teamMember        String
+  businessPlan      String
+  howMany           String
+  businessCurrently String
+  remainInAkure     String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

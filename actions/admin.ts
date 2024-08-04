@@ -37,3 +37,21 @@ export const getEntrepreneurById = async (id: string) => {
 
   return entre;
 };
+
+//GET ALL LAUNCH DETAILS
+export const getAllLaunchApplications = async () => {
+  const launch = await db.launch.findMany({
+    orderBy: { createdAt: "desc" },
+  });
+
+  return launch;
+};
+
+//GET A LAUNCH DETAILS BY ID
+export const getLaunchById = async (id: string) => {
+  const launchRes = await db.launch.findUnique({
+    where: { id },
+  });
+
+  return launchRes;
+};

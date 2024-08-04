@@ -1,12 +1,17 @@
+import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import LaunchFaq from "@/components/LaunchFaq";
+import Navbar from "@/components/Navbar";
 import { Separator } from "@/components/ui/separator";
+import { CalendarDays, SearchSlash } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function page() {
   return (
     <div className="border-b-2">
-      <div className="container w-full px-5 md:max-w-[63rem] mx-auto pb-12">
+      <Navbar />
+      <div className="container w-full px-5 md:max-w-[63rem] mx-auto">
         {/* HEADER! */}
         <div className="flex flex-col justify-center items-center gap-6 min-h-[75dvh] pt-16">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-primary text-center">
@@ -47,10 +52,15 @@ export default function page() {
             </p>
           </div>
           <div className="flex-1">
-            <div className="bg-gray-800 p-8 rounded-lg">
-              <h2 className="text-white text-3xl mb-4 font-primary">
-                About the Event
-              </h2>
+            <div className="bg-gray-900/50 p-8 rounded-lg">
+              <div className="flex justify-between">
+                <h2 className="text-white text-3xl mb-4 font-primary">
+                  About the Event
+                </h2>
+                <span className="text-[#ffba00]">
+                  <SearchSlash size={35} />
+                </span>
+              </div>
               <p className="font-display text-2xl">
                 Application opens -
                 <span className="text-[#ffba00] font-primary"> August 5th</span>
@@ -71,7 +81,7 @@ export default function page() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center mt-8 gap-5 w-full">
                 <Link
-                  href="/"
+                  href="/launch-application-form"
                   className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 w-full text-center"
                 >
                   Apply Now
@@ -83,10 +93,15 @@ export default function page() {
         {/* Upcoming Events */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-16 my-8 md:my-16">
           <div className="flex-1">
-            <div className="bg-gray-800 p-8 rounded-lg">
-              <h2 className="text-white text-3xl mb-4 font-primary">
-                Event Details
-              </h2>
+            <div className="bg-gray-900/50 p-8 rounded-lg">
+              <div className="flex justify-between">
+                <h2 className="text-white text-3xl mb-4 font-primary">
+                  Event Details
+                </h2>
+                <span className="text-[#ffba00]">
+                  <CalendarDays size={35} />
+                </span>
+              </div>
               <p className="font-display text-2xl">
                 Date:
                 <span className="text-[#ffba00] font-primary">
@@ -107,7 +122,7 @@ export default function page() {
               </p>
               <div className="flex flex-col sm:flex-row justify-center items-center mt-8 gap-5 w-full">
                 <Link
-                  href="/"
+                  href="/launch-application-form"
                   className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 w-full text-center"
                 >
                   Apply Now
@@ -132,10 +147,10 @@ export default function page() {
           </div>
         </div>
         {/* Receive up to N3m in seed funding */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-5 my-16">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-12 my-24">
           <div className="hidden md:flex flex-1">
             <Image
-              src="https://uploads-ssl.webflow.com/6392cc77dccb6e7e61c47fa1/6392cc77dccb6ef3d6c47fb6_unity-min.png"
+              src="https://uploads-ssl.webflow.com/6392cc77dccb6e7e61c47fa1/6392cc77dccb6ee5efc47fb5_piggybank-min.png"
               alt="Overview"
               // layout="fill"
               objectFit="cover"
@@ -188,23 +203,16 @@ export default function page() {
             <span className="text-[#ffba00]"> Prizes</span>
           </h2>
           <div className="grid grid-cols-3 gap-5 mt-8">
-            <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900 rounded-lg transition-all duration-500">
+            <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900/50 rounded-lg transition-all duration-500">
               {/* <GiPencil size={30} /> */}
               <h3 className="text-4xl font-medium font-primary capitalize">
                 250k
               </h3>
               <div className="w-full flex justify-center items-center text-7xl sm:text-[6rem]">
-                {/* <Image
-              src="/images/Mentorship2.png"
-              alt="mentor"
-              className="object-cover rounded-md"
-              width={500}
-              height={500}
-              /> */}
                 🥇
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900 rounded-lg transition-all duration-500">
+            <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900/50 rounded-lg transition-all duration-500">
               <h3 className="text-4xl font-medium font-primary capitalize">
                 150k
               </h3>
@@ -212,7 +220,7 @@ export default function page() {
                 🥈
               </div>
             </div>
-            <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900 rounded-lg transition-all duration-500">
+            <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900/50 rounded-lg transition-all duration-500">
               <h3 className="text-4xl font-medium font-primary capitalize">
                 100k
               </h3>
@@ -226,13 +234,19 @@ export default function page() {
               Why wait?
             </p>
             <Link
-              href="/"
+              href="/launch-application-form"
               className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 text-center"
             >
               Apply Now
             </Link>
           </div>
         </div>
+        <section id="faq">
+          <Contact />
+        </section>
+        <section id="faq">
+          <LaunchFaq />
+        </section>
       </div>
       <div className="container border-t-2 p-5 mt-5">
         <Footer />

@@ -9,35 +9,8 @@ import {
 export default function Footer() {
   return (
     <footer className="text-center">
-      <div className="flex my-2 gap-4 sm:justify-center sm:mt-0">
-        <Link
-          href="https://www.linkedin.com/company/the-hive-incubator/"
-          target="_blank"
-          rel="noreferrer"
-          className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
-        >
-          <IoLogoLinkedin size={35} />
-        </Link>
-        <Link
-          href="https://www.instagram.com/thehive.incubator?igsh=emRnN25pcmhjam5q"
-          target="_blank"
-          rel="noreferrer"
-          className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
-        >
-          <IoLogoInstagram size={35} />
-        </Link>
-        <Link
-          href="https://x.com/incubatorhive?s=21&t=pQ4xziLcRY2Dvreppcix0A"
-          target="_blank"
-          rel="noreferrer"
-          className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
-        >
-          <IoLogoTwitter size={35} />
-        </Link>
-      </div>
-      <p>&copy; 2024 Hive Incubator. All rights reserved.</p>
       {/* <p>Powered by Jowis Entreprise Limited, Nigeria</p> */}
-      <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-16 pt-12">
+      <div className="flex flex-col md:flex-row justify-between gap-12 md:gap-16 pt-2">
         <div className="flex flex-col justify-start items-start gap-3">
           <div className="flex items-center gap-4">
             <Link href="/">
@@ -81,6 +54,33 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      <div className="flex my-2 gap-4 sm:justify-center sm:mt-0 pt-12">
+        <Link
+          href="https://www.linkedin.com/company/the-hive-incubator/"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
+        >
+          <IoLogoLinkedin size={35} />
+        </Link>
+        <Link
+          href="https://www.instagram.com/thehive.incubator?igsh=emRnN25pcmhjam5q"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
+        >
+          <IoLogoInstagram size={35} />
+        </Link>
+        <Link
+          href="https://x.com/incubatorhive?s=21&t=pQ4xziLcRY2Dvreppcix0A"
+          target="_blank"
+          rel="noreferrer"
+          className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
+        >
+          <IoLogoTwitter size={35} />
+        </Link>
+      </div>
+      <p>&copy; 2024 Hive Incubator. All rights reserved.</p>
     </footer>
   );
 }

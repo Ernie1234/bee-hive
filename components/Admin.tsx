@@ -2,25 +2,18 @@
 
 import { useState } from "react";
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "./ui/table";
+import { Table, TableBody, TableHead, TableHeader, TableRow } from "./ui/table";
 import { cn } from "@/lib/utils";
 import { IEntrepreneur, TCoaches, TYPE } from "@/lib/data";
 import Row from "./Row";
 import CoachRow from "./CoachRow";
 
-interface ICoach {
+interface Props {
   coaches: TCoaches[];
   entre: IEntrepreneur[];
 }
 
-export default function Admin({ coaches, entre }: ICoach) {
+export default function Admin({ coaches, entre }: Props) {
   const [tableType, setTableType] = useState(TYPE.ENTREPRENEUR);
   return (
     <div className="py-8">

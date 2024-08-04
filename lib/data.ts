@@ -1,3 +1,5 @@
+import * as z from "zod";
+
 export const options = [
   { value: "Financial_Management", label: "Financial Management" },
   {
@@ -115,7 +117,54 @@ export type TCoaches = {
   createdAt: Date;
   updatedAt: Date;
 };
+export type TLaunch = {
+  id: string;
+  fullName: string;
+  email: string;
+  phone: string;
+  age: string;
+  businessName: string;
+  businessResidence: string;
+  businessIdea: string;
+  businessAim: string;
+  unique: string;
+  problemSolving: string;
+  teamMember: string;
+  businessPlan: string;
+  howMany: string;
+  businessCurrently: string;
+  remainInAkure: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+
 export enum TYPE {
   ENTREPRENEUR,
   COACH,
 }
+
+export const launchFormSchema = z.object({
+  fullName: z.string().min(2).max(50),
+  email: z.string().email(),
+  phone: z.string().min(10),
+  age: z.string({ required_error: "Please select an email to display" }),
+  businessName: z.string(),
+  businessResidence: z.enum(["yes", "no"], {
+    required_error: "You need to select business residence.",
+  }),
+  businessIdea: z.string().min(2),
+  businessAim: z.string().min(2),
+  unique: z.string().min(2),
+  problemSolving: z.string().min(2),
+  teamMember: z.enum(["yes", "no"], {
+    required_error: "You need to select team member option.",
+  }),
+  businessPlan: z.enum(["yes", "no"], {
+    required_error: "You need to select team member option.",
+  }),
+  howMany: z.string(),
+  businessCurrently: z.string().min(2),
+  remainInAkure: z.enum(["yes", "no"], {
+    required_error: "You need to select team member option.",
+  }),
+});

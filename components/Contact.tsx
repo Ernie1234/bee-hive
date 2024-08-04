@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <div className="flex flex-col md:flex-row justify-center items-center gap-5 my-16">
-      <div className="hidden md:flex flex-1">
+      <div className="hidden md:flex flex-1 p-20">
         <Image
-          src="https://uploads-ssl.webflow.com/6392cc77dccb6e7e61c47fa1/6392cc77dccb6ef3d6c47fb6_unity-min.png"
+          src="/images/Logo.png"
           alt="Overview"
           // layout="fill"
           objectFit="cover"
