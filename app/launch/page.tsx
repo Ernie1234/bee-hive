@@ -1,10 +1,11 @@
+import AboutCard from "@/components/AboutCard";
 import Contact from "@/components/Contact";
+import EventCard from "@/components/EventCard";
 import Footer from "@/components/Footer";
 import LaunchFaq from "@/components/LaunchFaq";
 import Navbar from "@/components/Navbar";
 import { Separator } from "@/components/ui/separator";
-import { CalendarDays, SearchSlash } from "lucide-react";
-import Image from "next/image";
+import { SearchSlash } from "lucide-react";
 import Link from "next/link";
 
 export default function page() {
@@ -52,83 +53,13 @@ export default function page() {
             </p>
           </div>
           <div className="flex-1">
-            <div className="bg-gray-900/50 p-8 rounded-lg">
-              <div className="flex justify-between">
-                <h2 className="text-white text-3xl mb-4 font-primary">
-                  About the Event
-                </h2>
-                <span className="text-[#ffba00]">
-                  <SearchSlash size={35} />
-                </span>
-              </div>
-              <p className="font-display text-2xl">
-                Application opens -
-                <span className="text-[#ffba00] font-primary"> August 5th</span>
-              </p>
-              <p className="font-display text-2xl">
-                Application closes -
-                <span className="text-[#ffba00] font-primary">
-                  {" "}
-                  August 11th
-                </span>
-              </p>
-              <p className="font-display text-2xl">
-                Pitch Day -
-                <span className="text-[#ffba00] font-primary">
-                  {" "}
-                  August 30th
-                </span>
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center items-center mt-8 gap-5 w-full">
-                <Link
-                  href="/launch-application-form"
-                  className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 w-full text-center"
-                >
-                  Apply Now
-                </Link>
-              </div>
-            </div>
+            <AboutCard />
           </div>
         </div>
         {/* Upcoming Events */}
         <div className="flex flex-col md:flex-row justify-center items-center gap-16 my-8 md:my-16">
           <div className="flex-1">
-            <div className="bg-gray-900/50 p-8 rounded-lg">
-              <div className="flex justify-between">
-                <h2 className="text-white text-3xl mb-4 font-primary">
-                  Event Details
-                </h2>
-                <span className="text-[#ffba00]">
-                  <CalendarDays size={35} />
-                </span>
-              </div>
-              <p className="font-display text-2xl">
-                Date:
-                <span className="text-[#ffba00] font-primary">
-                  {" "}
-                  August 30th
-                </span>
-              </p>
-              <p className="font-display text-2xl">
-                Time:
-                <span className="text-[#ffba00] font-primary"> TBD</span>
-              </p>
-              <p className="font-display text-2xl">
-                Location:
-                <span className="text-[#ffba00] font-primary">
-                  {" "}
-                  ALAGBAKA GRA
-                </span>
-              </p>
-              <div className="flex flex-col sm:flex-row justify-center items-center mt-8 gap-5 w-full">
-                <Link
-                  href="/launch-application-form"
-                  className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 w-full text-center"
-                >
-                  Apply Now
-                </Link>
-              </div>
-            </div>
+            <EventCard />
           </div>
           <div className="flex-1">
             <h2 className="text-[#ffba00] text-5xl font-primary">

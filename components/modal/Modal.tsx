@@ -91,7 +91,7 @@ const Modal = ({
             >
               <X />
             </div>
-            <div className="absolute z-40 top-8 left-8 text-white">
+            <div className="absolute z-40 top-4 md:top-8 left-8 text-white">
               <Link href="/">
                 <Image
                   alt="logo"
@@ -103,7 +103,7 @@ const Modal = ({
               </Link>
             </div>
             <div className="flex flex-col flex-1 justify-center items-center">
-              <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto space-y-4">
+              <div className="relative w-full md:w-4/6 lg:w-3/6 xl:w-2/5 my-6 mx-auto h-full lg:h-auto md:h-auto space-y-4 pt-16 px-5 md:px-0 md:pt-0 ">
                 <h3 className="text-2xl font-medium font-primary text-left">
                   {title}
                 </h3>
