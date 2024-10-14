@@ -25,7 +25,7 @@ export default function Navbar() {
         inView && "shadow-lg"
       }`}
     >
-      <div className="container w-full px-5 md:max-w-[63rem] mx-auto flex justify-between items-center text-primary-foreground font-display">
+      <div className="flex justify-between items-center mx-auto px-5 w-full md:max-w-[63rem] font-display text-primary-foreground container">
         <Link href="/">
           <Image
             alt="logo"
@@ -39,10 +39,13 @@ export default function Navbar() {
           {/* <Link href="/coach" className="capitalize">
             join us
           </Link> */}
-          <Link href="/launch" className="capitalize text-white">
+          <Link href="/inside-hive" className="text-white capitalize">
+            Inside the Hive
+          </Link>
+          <Link href="/launch" className="text-white capitalize">
             Launch Lab
           </Link>
-          <Link href="/coach" className="capitalize text-[#ffba00]">
+          <Link href="/coach" className="text-[#ffba00] capitalize">
             Join Us
           </Link>
         </div>

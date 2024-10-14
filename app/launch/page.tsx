@@ -5,28 +5,27 @@ import Footer from "@/components/Footer";
 import LaunchFaq from "@/components/LaunchFaq";
 import Navbar from "@/components/Navbar";
 import { Separator } from "@/components/ui/separator";
-import { SearchSlash } from "lucide-react";
 import Link from "next/link";
 
 export default function page() {
   return (
     <div className="border-b-2">
       <Navbar />
-      <div className="container w-full px-5 md:max-w-[63rem] mx-auto">
+      <div className="mx-auto px-5 w-full md:max-w-[63rem] container">
         {/* HEADER! */}
-        <div className="flex flex-col justify-center items-center gap-6 min-h-[75dvh] pt-16">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-primary text-center">
+        <div className="flex flex-col justify-center items-center gap-6 pt-16 min-h-[75dvh]">
+          <h1 className="font-primary font-semibold text-4xl text-center sm:text-5xl md:text-6xl lg:text-7xl">
             Ignite your <span className="text-[#ffba00]">startup</span> journey
           </h1>
           <div className="flex flex-col justify-center items-center space-y-2">
-            <p className="text-lg sm:text-xl md:text-2xl w-full sm:w-2/3 text-center">
+            <p className="w-full sm:w-2/3 text-center text-lg sm:text-xl md:text-2xl">
               Welcome to LaunchLab, The Hive Incubator{"'"}s premier event
               designed to ignite the entrepreneurial spirit and discover the
               next wave of innovative startups.
             </p>
-            <p className="text-2xl sm:text-3xl w-full text-center">
+            <p className="w-full text-2xl text-center sm:text-3xl">
               Up to
-              <span className="text-[#ffba00] font-semibold text-5xl">
+              <span className="font-semibold text-[#ffba00] text-5xl">
                 {" "}
                 3m Naira{" "}
               </span>
@@ -35,13 +34,13 @@ export default function page() {
           </div>
         </div>
         {/* Apply to Launch Lab */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-5 my-8">
+        <div className="flex md:flex-row flex-col justify-center items-center gap-5 my-8">
           <div className="flex-1">
-            <h2 className="text-[#ffba00] text-5xl font-primary">
+            <h2 className="font-primary text-[#ffba00] text-5xl">
               About the Event
             </h2>
 
-            <Separator className="my-4 w-24 mb-8 bg-[#ffba00]" />
+            <Separator className="bg-[#ffba00] my-4 mb-8 w-24" />
             <p className="font-display text-xl">
               LaunchLab is not just a pitch competition; it{"'"}s a platform for
               aspiring entrepreneurs to present their vision, gain valuable
@@ -57,16 +56,16 @@ export default function page() {
           </div>
         </div>
         {/* Upcoming Events */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-16 my-8 md:my-16">
+        <div className="flex md:flex-row flex-col justify-center items-center gap-16 my-8 md:my-16">
           <div className="flex-1">
             <EventCard />
           </div>
           <div className="flex-1">
-            <h2 className="text-[#ffba00] text-5xl font-primary">
+            <h2 className="font-primary text-[#ffba00] text-5xl">
               How to apply
             </h2>
 
-            <Separator className="my-4 w-24 mb-8 bg-[#ffba00]" />
+            <Separator className="bg-[#ffba00] my-4 mb-8 w-24" />
             <p className="font-display text-xl">
               Do you have a revolutionary idea that could change the world?
               Apply to pitch at LaunchLab by completing our online registration
@@ -78,8 +77,8 @@ export default function page() {
           </div>
         </div>
         {/* Receive up to N3m in seed funding */}
-        <div className="flex flex-col md:flex-row justify-center items-center gap-12 mt-24 mb-6">
-          {/* <div className="hidden md:flex flex-1">
+        <div className="flex md:flex-row flex-col justify-center items-center gap-12 mt-24 mb-6">
+          {/* <div className="md:flex flex-1 hidden">
             <Image
               src="https://uploads-ssl.webflow.com/6392cc77dccb6e7e61c47fa1/6392cc77dccb6ee5efc47fb5_piggybank-min.png"
               alt="Overview"
@@ -91,16 +90,16 @@ export default function page() {
             />
           </div> */}
           <div className="flex-1">
-            <h2 className="text-[#ffba00] text-5xl font-primary font-semibold">
+            <h2 className="font-primary font-semibold text-[#ffba00] text-5xl">
               Receive up to N3m in seed funding
             </h2>
-            <Separator className="my-4 w-24 bg-[#ffba00]" />
-            <p className="text-lg mb-4">
+            <Separator className="bg-[#ffba00] my-4 w-24" />
+            <p className="mb-4 text-lg">
               The selected startups will join The Hive Incubator{"'"}s program,
               where they will receive
             </p>
-            <div className="flex flex-col gap-5 justify-center">
-              <ol className="list-inside list-decimal font-medium pt-2">
+            <div className="flex flex-col justify-center gap-5">
+              <ol className="pt-2 font-medium list-decimal list-inside">
                 <li>
                   Free access to the Hive tech hub for up founder and up to 2
                   team members.
@@ -123,50 +122,50 @@ export default function page() {
           </div>
         </div>
         {/* TERMS OF APPLICATION */}
-        <div className="flex flex-col gap-4 items-center text-white">
+        <div className="flex flex-col items-center gap-4 text-white">
           *terms and condition apply, these are all based on accepting our offer
           for 10% equity ONLY 5 businesses will Join the incubator
         </div>
         {/* LAUNCH LAB PRIZE */}
         <div className="my-12">
-          <h2 className="text-white text-center text-5xl font-primary font-semibold">
+          <h2 className="font-primary font-semibold text-5xl text-center text-white">
             Launch Lab
             <span className="text-[#ffba00]"> Prizes</span>
           </h2>
-          <div className="grid grid-cols-3 gap-5 mt-8">
+          <div className="gap-5 grid grid-cols-3 mt-8">
             <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900/50 rounded-lg transition-all duration-500">
               {/* <GiPencil size={30} /> */}
-              <h3 className="text-4xl font-medium font-primary capitalize">
+              <h3 className="font-medium font-primary text-4xl capitalize">
                 250k
               </h3>
-              <div className="w-full flex justify-center items-center text-7xl sm:text-[6rem]">
+              <div className="flex justify-center items-center w-full text-7xl sm:text-[6rem]">
                 🥇
               </div>
             </div>
             <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900/50 rounded-lg transition-all duration-500">
-              <h3 className="text-4xl font-medium font-primary capitalize">
+              <h3 className="font-medium font-primary text-4xl capitalize">
                 150k
               </h3>
-              <div className="w-full flex justify-center items-center text-7xl sm:text-[6rem]">
+              <div className="flex justify-center items-center w-full text-7xl sm:text-[6rem]">
                 🥈
               </div>
             </div>
             <div className="flex flex-col justify-center items-center gap-4 hover:bg-slate-900/50 rounded-lg transition-all duration-500">
-              <h3 className="text-4xl font-medium font-primary capitalize">
+              <h3 className="font-medium font-primary text-4xl capitalize">
                 100k
               </h3>
-              <div className="w-full flex justify-center items-center text-7xl sm:text-[6rem]">
+              <div className="flex justify-center items-center w-full text-7xl sm:text-[6rem]">
                 🥉
               </div>
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row justify-center items-center mt-16 gap-5">
-            <p className="text-[#ffba00] font-semibold text-5xl text-nowrap">
+          <div className="flex sm:flex-row flex-col justify-center items-center gap-5 mt-16">
+            <p className="font-semibold text-[#ffba00] text-5xl text-nowrap">
               Why wait?
             </p>
             <Link
               href="/launch-application-form"
-              className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 text-center"
+              className="bg-background hover:bg-background/95 px-14 py-3 rounded-full text-center text-foreground text-lg transition-all duration-500"
             >
               Apply Now
             </Link>
@@ -179,7 +178,7 @@ export default function page() {
           <LaunchFaq />
         </section>
       </div>
-      <div className="container border-t-2 p-5 mt-5">
+      <div className="mt-5 p-5 border-t-2 container">
         <Footer />
       </div>
     </div>
