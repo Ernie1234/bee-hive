@@ -1,4 +1,6 @@
+import Mentors from "@/components/Mentors";
 import Navbar from "@/components/Navbar";
+import Partners from "@/components/Partners";
 import Image from "next/image";
 import { TbBuildingFactory } from "react-icons/tb";
 
@@ -98,6 +100,53 @@ export default function page() {
             </div>
           </div>
         </div>
+        <div className="flex flex-col gap-8 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className="flex flex-col justify-center gap-5">
+              <h5 className="text-[#ffba00] text-4xl font-semibold font-display">
+                The Tech Hub
+              </h5>
+              <p className="text-sm">
+                Our hub offers state-of-the-art facilities equipped with the
+                latest tools and technologies to bring your ideas to life.
+                Collaborate with like-minded innovators and make the most of our
+                exclusive resources to accelerate your success.
+              </p>
+            </div>
+            <div className="flex-1">
+              <Image
+                src="/images/Logo.png"
+                alt="tech hub logo"
+                className="object-cover w-full h-full"
+                height={500}
+                width={500}
+              />
+            </div>
+          </div>
+          <div className="flex flex-wrap justify-center gap-10">
+            <p className="text-xl font-display">Co-Working Space</p>
+            <p className="text-xl font-display">Mini Lounge and Resting Area</p>
+            <p className="text-xl font-display">Creative Space</p>
+            <p className="text-xl font-display">Board Room</p>
+            <p className="text-xl font-display">Recreational Facilities</p>
+            <p className="text-xl font-display">kitchen</p>
+            <p className="text-xl font-display">Internet</p>
+            <p className="text-xl font-display">Parking Space</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-8 items-center my-8 md:my-20">
+          <div className="flex flex-col justify-center gap-5">
+            <h4 className="text-[#ffba00] text-5xl font-primary font-semibold text-center">
+              Businesses in The Hub
+            </h4>
+            <p className="text-lg">
+              At the Hub, we provide businesses with cutting-edge facilities and
+              collaborative spaces designed to fuel innovation and growth.
+            </p>
+          </div>
+        </div>
+        <Mentors />
+        <Partners />
       </div>
     </div>
   );
