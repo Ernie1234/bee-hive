@@ -12,7 +12,7 @@ function Equity() {
         <h2 className="font-bold font-primary text-2xl text-center md:text-3xl lg:text-5xl">
           For 10% Equity
         </h2>
-        <Button variant="hiveYellow" asChild>
+        <Button variant="hiveYellow" size="lg" asChild>
           <Link href="/inside-the-hive">Inside the Hive</Link>
         </Button>
       </div>
