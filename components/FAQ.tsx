@@ -7,11 +7,11 @@ import {
 
 export default function FAQ() {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 my-16">
-      <h2 className="text-[#ffba00] text-5xl font-primary font-semibold">
-        FAQ
+    <div className="flex justify-center gap-5 sm:gap-8 md:gap-12 lg:gap-16 bg-faq-pattern bg-contain bg-no-repeat bg-top min-h-[45vw]">
+      <h2 className="font-primary font-semibold text-3xl text-white self-center">
+        Frequently asked Question
       </h2>
-      <div className="w-full">
+      <div className="w-full self-end">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>What is The Hive Incubator? </AccordionTrigger>
@@ -34,7 +34,7 @@ export default function FAQ() {
               Our offerings are designed to foster innovation, encourage growth,
               and empower you through every step of your entrepreneurial
               journey.
-              <ol className="list-inside list-decimal font-medium pt-2">
+              <ol className="pt-2 font-medium list-decimal list-inside">
                 <li>Mentorship</li>
                 <li>Financing</li>
                 <li>Coach</li>

@@ -21,6 +21,9 @@ const config = {
       backgroundImage: {
         "hero-pattern": "url('/images/hero.svg')",
         "equity-pattern": "url('/images/equity.svg')",
+        "resilience-pattern": "url('/images/resilience.svg')",
+        "catalyst-pattern": "url('/images/catalyst.svg')",
+        "faq-pattern": "url('/images/faq.svg')",
       },
       colors: {
         border: "hsl(var(--border))",
