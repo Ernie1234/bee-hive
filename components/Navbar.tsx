@@ -114,14 +114,14 @@ export default function Navbar() {
             />
           </Link>
 
-          <NavigationMenu>
+          <NavigationMenu className="md:block hidden">
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent">
+                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                   Inside the hive
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-gradient-to-b from-foreground to-gold-foreground/50 bg-foreground border-2 border-gold">
-                  <ul className="grid w-[400px] max-w-fit min-h-fit gap-3 p-2 grid-cols-1">
+                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
+                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
                     {INSIDE_HIVE.map((component) => (
                       <ListItem
                         key={component.title}
@@ -136,11 +136,11 @@ export default function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent">
+                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                   Resources
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-gradient-to-b from-foreground to-gold-foreground/50 bg-foreground border-2 border-gold">
-                  <ul className="grid w-[400px] max-w-fit min-h-fit gap-3 p-2 grid-cols-1">
+                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
+                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
                     {RESOURCES.map((component) => (
                       <ListItem
                         key={component.title}
@@ -155,11 +155,11 @@ export default function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent">
+                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                   Programs
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-gradient-to-b from-foreground to-gold-foreground/50 bg-foreground border-2 border-gold">
-                  <ul className="grid w-[400px] max-w-fit min-h-fit gap-3 p-2 grid-cols-1">
+                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
+                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
                     {PROGRAMS.map((component) => (
                       <ListItem
                         key={component.title}
@@ -174,11 +174,11 @@ export default function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent active:bg-transparent focus:bg-transparent">
+                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                   Media
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="bg-gradient-to-b from-foreground to-gold-foreground/50 bg-foreground border-2 border-gold">
-                  <ul className="grid w-[400px] max-w-fit min-h-fit gap-3 p-2 grid-cols-1">
+                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
+                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
                     {MEDIA.map((component) => (
                       <ListItem
                         key={component.title}
@@ -228,19 +228,19 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
               <Image
                 src={icon}
                 alt={icon}
-                className="mr-2 w-6 group-hover:hidden block"
+                className="block group-hover:hidden mr-2 w-6"
                 width={100}
                 height={100}
               />
               <Image
                 src={hoverIcon}
                 alt={icon}
-                className="mr-2 w-6 hidden group-hover:block"
+                className="group-hover:block hidden mr-2 w-6"
                 width={100}
                 height={100}
               />
             </div>
-            <div className="text-sm font-medium leading-none text-gold hover:text-gold-foreground">
+            <div className="font-medium text-gold text-sm hover:text-gold-foreground leading-none">
               {title}
             </div>
           </a>

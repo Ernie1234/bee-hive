@@ -7,7 +7,7 @@ import {
 
 export default function FAQ() {
   return (
-    <div className="flex justify-center gap-5 sm:gap-8 md:gap-12 lg:gap-16 bg-faq-pattern bg-contain bg-no-repeat bg-top min-h-[45vw]">
+    <div className="flex flex-col justify-center gap-5 sm:gap-8 md:gap-12 lg:gap-16 bg-faq-pattern bg-contain bg-no-repeat bg-top mb-12 md:mb-0 min-h-[45vw]">
       <h2 className="font-primary font-semibold text-3xl text-white self-center">
         Frequently asked Question
       </h2>

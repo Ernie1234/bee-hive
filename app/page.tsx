@@ -1,3 +1,4 @@
+import BigIdeas from "@/components/BigIdeas";
 import Catalyst from "@/components/Catalyst";
 import Contact from "@/components/Contact";
 import Equity from "@/components/Equity";
@@ -5,11 +6,8 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import Offer from "@/components/Offer";
-import Overview from "@/components/Overview";
-import Problem from "@/components/Problem";
+import Ofer from "@/components/Ofer";
 import Resilience from "@/components/Resilience";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,7 +17,8 @@ export default function Home() {
         <section id="who">
           <Header />
         </section>
-
+        <BigIdeas />
+        <Ofer />
         <Equity />
         <Resilience />
         <Catalyst />
@@ -27,10 +26,8 @@ export default function Home() {
         <section id="contact">
           <Contact />
         </section>
-        <section id="faq"></section>
-        {/* <BuildWithUs /> */}
       </div>
-      <div className="p-5 border-t-2 container">
+      <div className="pt-8 container">
         <Footer />
       </div>
     </main>

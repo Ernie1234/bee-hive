@@ -20,10 +20,12 @@ const config = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/images/hero.svg')",
+        "bigIdea-pattern": "url('/images/bigIdeas.svg')",
         "equity-pattern": "url('/images/equity.svg')",
         "resilience-pattern": "url('/images/resilience.svg')",
         "catalyst-pattern": "url('/images/catalyst.svg')",
         "faq-pattern": "url('/images/faq.svg')",
+        "hive-pattern": "url('/images/hive.svg')",
       },
       colors: {
         border: "hsl(var(--border))",
