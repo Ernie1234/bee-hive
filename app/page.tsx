@@ -1,5 +1,6 @@
 import Catalyst from "@/components/Catalyst";
 import Contact from "@/components/Contact";
+import Equity from "@/components/Equity";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -11,15 +12,15 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="font-exo border-b-2">
+    <main className="border-b-2 font-exo">
       <Navbar />
-      <div className="container w-full px-5 md:max-w-[63rem] mx-auto pb-12">
+      <div className="mx-auto px-5 pb-12 w-full container">
         <section id="who">
           <Header />
         </section>
         <Overview />
         <div className="flex flex-col gap-5 my-12 sm:my-14 md:my-16 lg:my-24">
-          <h2 className="text-[#ffba00] text-center text-5xl font-primary font-semibold uppercase">
+          <h2 className="font-primary font-semibold text-[#ffba00] text-5xl text-center uppercase">
             We offer
           </h2>
           <Offer />
@@ -30,19 +31,19 @@ export default function Home() {
         <Value /> */}
         {/* <ActionPlan /> */}
         <div className="flex flex-col justify-center items-center gap-6 mx-auto">
-          <h2 className="text-white text-5xl font-primary font-semibold">
+          <h2 className="font-primary font-semibold text-5xl text-white">
             For
             <span className="text-[#ffba00]"> 10% </span>
             Equity
           </h2>
           <Link
             href="/launch"
-            className="bg-background hover:bg-background/95 text-foreground text-lg px-14 py-3 rounded-full transition-all duration-500 w-full text-center max-w-fit"
+            className="bg-background hover:bg-background/95 px-14 py-3 rounded-full w-full max-w-fit text-center text-foreground text-lg transition-all duration-500"
           >
             Apply to Launch Lab
           </Link>
         </div>
-        <Problem />
+        <Equity />
         <Catalyst />
         <section id="contact">
           <Contact />
@@ -52,7 +53,7 @@ export default function Home() {
         </section>
         {/* <BuildWithUs /> */}
       </div>
-      <div className="container border-t-2 p-5">
+      <div className="p-5 border-t-2 container">
         <Footer />
       </div>
     </main>
