@@ -26,6 +26,8 @@ const config = {
         "catalyst-pattern": "url('/images/catalyst.svg')",
         "faq-pattern": "url('/images/faq.svg')",
         "hive-pattern": "url('/images/hive.svg')",
+        "aboutHive-pattern": "url('/images/aboutHive.svg')",
+        "dots-pattern": "url('/images/Dots.svg')",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -40,6 +42,10 @@ const config = {
         gold: {
           DEFAULT: "hsl(var(--gold))",
           foreground: "hsl(var(--gold-foreground))",
+        },
+        hive: {
+          DEFAULT: "hsl(var(--hive-yellow))",
+          foreground: "hsl(var(--hive-yellow-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
