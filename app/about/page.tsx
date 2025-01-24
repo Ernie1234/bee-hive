@@ -1,8 +1,11 @@
 import Communities from "@/components/Communities";
 import Contact from "@/components/Contact";
+import Entrepreneurs from "@/components/Entrepreneurs";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Philosophy from "@/components/Philosophy";
+import TechHub from "@/components/TechHub";
+import TheTeam from "@/components/TheTeam";
 import Image from "next/image";
 
 function page() {
@@ -127,9 +130,15 @@ function page() {
       </div>
       <Philosophy />
       <Communities />
-
-      <Contact />
-      <Footer />
+      <TechHub />
+      <TheTeam />
+      <Entrepreneurs />
+      <div className="my-16 container">
+        <Contact />
+      </div>
+      <div className=" container">
+        <Footer />
+      </div>
     </div>
   );
 }
