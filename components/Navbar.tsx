@@ -116,12 +116,18 @@ export default function Navbar() {
 
           <NavigationMenu className="md:block hidden">
             <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
+              <NavigationMenuItem value="a">
+                <NavigationMenuTrigger
+                  itemID="a"
+                  className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                >
                   Inside the hive
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
-                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
+                <NavigationMenuContent
+                  itemID="a"
+                  className="border-2 border-gold left-0 top-0  bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50"
+                >
+                  <ul className="one gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
                     {INSIDE_HIVE.map((component) => (
                       <ListItem
                         key={component.title}
@@ -135,12 +141,18 @@ export default function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
+              <NavigationMenuItem value="b">
+                <NavigationMenuTrigger
+                  itemID="b"
+                  className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
+                >
                   Resources
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
-                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
+                <NavigationMenuContent
+                  itemID="b"
+                  className="border-2 border-gold bg-foreground bg-gradient-to-b left-0 top-0 from-foreground to-gold-foreground/50"
+                >
+                  <ul className="two gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
                     {RESOURCES.map((component) => (
                       <ListItem
                         key={component.title}
@@ -158,8 +170,8 @@ export default function Navbar() {
                 <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
                   Programs
                 </NavigationMenuTrigger>
-                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
-                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
+                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground left-0 top-0 to-gold-foreground/50">
+                  <ul className="left-0 top-0 gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
                     {PROGRAMS.map((component) => (
                       <ListItem
                         key={component.title}
@@ -207,8 +219,13 @@ export default function Navbar() {
 const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
   ({ className, title, hoverIcon, icon, href, pathName, ...props }, ref) => {
     const router = useRouter();
+
     return (
-      <li>
+      <li
+        onClick={() => {
+          router.push(`${href}`);
+        }}
+      >
         <NavigationMenuLink asChild>
           <a
             ref={ref}
@@ -222,7 +239,7 @@ const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
             <div
               className=""
               onClick={() => {
-                router.push(`/${href}`);
+                router.push(`${href}`);
               }}
             >
               <Image

@@ -168,3 +168,96 @@ export const launchFormSchema = z.object({
     required_error: "You need to select team member option.",
   }),
 });
+
+export const MOST_RECENT_ITEMS = [
+  {
+    id: 1,
+    src: "/images/blogs/1.svg",
+    alt: "blog_1",
+    title: "How to Validate Your Startup Idea Before Launching",
+    content: "Entrepreneurship & Startups",
+  },
+  {
+    id: 2,
+    src: "/images/blogs/2.svg",
+    alt: "blog_2",
+    title: "Breaking into Competitive Markets as a Small Business",
+    content: "Business Growth & Strategy",
+  },
+  {
+    id: 3,
+    src: "/images/blogs/3.svg",
+    alt: "blog_2",
+    title: "How to Stay Motivated During Challenging Phases in Business",
+    content: "Personal Development & Leadership",
+  },
+];
+export const BUSINESS_GROWTH_ITEMS = [
+  {
+    id: 1,
+    src: "/images/blogs/4.svg",
+    alt: "blog_4",
+    title: "How to Validate Your Startup Idea Before Launching",
+    content: "Entrepreneurship & Startups",
+  },
+  {
+    id: 2,
+    src: "/images/blogs/5.svg",
+    alt: "blog_5",
+    title: "Breaking into Competitive Markets as a Small Business",
+    content: "Business Growth & Strategy",
+  },
+  {
+    id: 3,
+    src: "/images/blogs/6.svg",
+    alt: "blog_6S",
+    title: "How to Stay Motivated During Challenging Phases in Business",
+    content: "Personal Development & Leadership",
+  },
+];
+export const ENTREPRENEURSHIP_STARTUP_ITEMS = [
+  {
+    id: 1,
+    src: "/images/blogs/4.svg",
+    alt: "blog_4",
+    title: "How to Validate Your Startup Idea Before Launching",
+    content: "Entrepreneurship & Startups",
+  },
+  {
+    id: 2,
+    src: "/images/blogs/7.svg",
+    alt: "blog_7",
+    title: "Breaking into Competitive Markets as a Small Business",
+    content: "Business Growth & Strategy",
+  },
+  {
+    id: 3,
+    src: "/images/blogs/8.svg",
+    alt: "blog_8",
+    title: "How to Stay Motivated During Challenging Phases in Business",
+    content: "Personal Development & Leadership",
+  },
+];
+export const INNOVATION_TECHNOLOGY_ITEMS = [
+  {
+    id: 1,
+    src: "/images/blogs/9.svg",
+    alt: "blog_9",
+    title: "How to Validate Your Startup Idea Before Launching",
+    content: "Entrepreneurship & Startups",
+  },
+  {
+    id: 2,
+    src: "/images/blogs/10.svg",
+    alt: "blog_10",
+    title: "Breaking into Competitive Markets as a Small Business",
+    content: "Business Growth & Strategy",
+  },
+  {
+    id: 3,
+    src: "/images/blogs/11.svg",
+    alt: "blog_11",
+    title: "How to Stay Motivated During Challenging Phases in Business",
+    content: "Personal Development & Leadership",
+  },
+];
