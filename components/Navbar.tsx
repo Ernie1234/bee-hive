@@ -5,17 +5,12 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 import { Button } from "./ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 
-import { cn } from "@/lib/utils";
 import { usePathname, useRouter } from "next/navigation";
+import { Menus } from "@/lib/utils";
+import DesktopMenu from "./DesktopMenu";
+import MobMenu from "./MobMenu";
+
 interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
   title: string;
   icon: string;
@@ -114,156 +109,21 @@ export default function Navbar() {
             />
           </Link>
 
-          <NavigationMenu className="md:block hidden">
-            <NavigationMenuList>
-              <NavigationMenuItem value="a">
-                <NavigationMenuTrigger
-                  itemID="a"
-                  className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
-                >
-                  Inside the hive
-                </NavigationMenuTrigger>
-                <NavigationMenuContent
-                  itemID="a"
-                  className="border-2 border-gold left-0 top-0  bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50"
-                >
-                  <ul className="one gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
-                    {INSIDE_HIVE.map((component) => (
-                      <ListItem
-                        key={component.title}
-                        title={component.title}
-                        href={component.href}
-                        icon={component.icon}
-                        hoverIcon={component.hoverIcon}
-                        pathName={pathname}
-                      />
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem value="b">
-                <NavigationMenuTrigger
-                  itemID="b"
-                  className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent"
-                >
-                  Resources
-                </NavigationMenuTrigger>
-                <NavigationMenuContent
-                  itemID="b"
-                  className="border-2 border-gold bg-foreground bg-gradient-to-b left-0 top-0 from-foreground to-gold-foreground/50"
-                >
-                  <ul className="two gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
-                    {RESOURCES.map((component) => (
-                      <ListItem
-                        key={component.title}
-                        title={component.title}
-                        href={component.href}
-                        icon={component.icon}
-                        hoverIcon={component.hoverIcon}
-                        pathName={pathname}
-                      />
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                  Programs
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground left-0 top-0 to-gold-foreground/50">
-                  <ul className="left-0 top-0 gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
-                    {PROGRAMS.map((component) => (
-                      <ListItem
-                        key={component.title}
-                        title={component.title}
-                        href={component.href}
-                        icon={component.icon}
-                        hoverIcon={component.hoverIcon}
-                        pathName={pathname}
-                      />
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent hover:bg-transparent focus:bg-transparent active:bg-transparent">
-                  Media
-                </NavigationMenuTrigger>
-                <NavigationMenuContent className="border-2 border-gold bg-foreground bg-gradient-to-b from-foreground to-gold-foreground/50">
-                  <ul className="gap-3 grid grid-cols-1 p-2 w-[400px] max-w-fit min-h-fit">
-                    {MEDIA.map((component) => (
-                      <ListItem
-                        key={component.title}
-                        title={component.title}
-                        href={component.href}
-                        icon={component.icon}
-                        hoverIcon={component.hoverIcon}
-                        pathName={pathname}
-                      />
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          <ul className="gap-x-1 lg:flex items-center hidden">
+            {Menus.map((menu) => (
+              <DesktopMenu menu={menu} key={menu.name} />
+            ))}
+          </ul>
         </div>
-
-        <Button variant="hiveYellow">
-          <Link href="/contact">Join us</Link>
-        </Button>
+        <div className="flex items-center gap-x-5">
+          <Button variant="hiveYellow">
+            <Link href="/contact">Join us</Link>
+          </Button>
+          <div className="lg:hidden">
+            <MobMenu Menus={Menus} />
+          </div>
+        </div>
       </div>
     </nav>
   );
 }
-
-const ListItem = React.forwardRef<HTMLAnchorElement, ListItemProps>(
-  ({ className, title, hoverIcon, icon, href, pathName, ...props }, ref) => {
-    const router = useRouter();
-
-    return (
-      <li
-        onClick={() => {
-          router.push(`${href}`);
-        }}
-      >
-        <NavigationMenuLink asChild>
-          <a
-            ref={ref}
-            className={cn(
-              "flex select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none hover:bg-foreground hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground group transition-all duration-500",
-              pathName === href ? "text-gold-foreground" : "text-gold",
-              className
-            )}
-            {...props}
-          >
-            <div
-              className=""
-              onClick={() => {
-                router.push(`${href}`);
-              }}
-            >
-              <Image
-                src={icon}
-                alt={icon}
-                className="block group-hover:hidden mr-2 w-6"
-                width={100}
-                height={100}
-              />
-              <Image
-                src={hoverIcon}
-                alt={icon}
-                className="group-hover:block hidden mr-2 w-6"
-                width={100}
-                height={100}
-              />
-            </div>
-            <div className="font-medium text-gold text-sm hover:text-gold-foreground leading-none">
-              {title}
-            </div>
-          </a>
-        </NavigationMenuLink>
-      </li>
-    );
-  }
-);
-ListItem.displayName = "ListItem";
