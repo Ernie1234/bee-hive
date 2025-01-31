@@ -261,3 +261,49 @@ export const INNOVATION_TECHNOLOGY_ITEMS = [
     content: "Personal Development & Leadership",
   },
 ];
+export const PERSONAL_DEVELOPMENT_ITEMS = [
+  {
+    id: 1,
+    src: "/images/blogs/12.svg",
+    alt: "blog_9",
+    title: "How to Validate Your Startup Idea Before Launching",
+    content: "Entrepreneurship & Startups",
+  },
+  {
+    id: 2,
+    src: "/images/blogs/13.svg",
+    alt: "blog_10",
+    title: "Breaking into Competitive Markets as a Small Business",
+    content: "Business Growth & Strategy",
+  },
+  {
+    id: 3,
+    src: "/images/blogs/14.svg",
+    alt: "blog_11",
+    title: "How to Stay Motivated During Challenging Phases in Business",
+    content: "Personal Development & Leadership",
+  },
+];
+export const SUCCESS_STORIES_ITEMS = [
+  {
+    id: 1,
+    src: "/images/blogs/15.svg",
+    alt: "blog_9",
+    title: "How to Validate Your Startup Idea Before Launching",
+    content: "Entrepreneurship & Startups",
+  },
+  {
+    id: 2,
+    src: "/images/blogs/16.svg",
+    alt: "blog_10",
+    title: "Breaking into Competitive Markets as a Small Business",
+    content: "Business Growth & Strategy",
+  },
+  {
+    id: 3,
+    src: "/images/blogs/17.svg",
+    alt: "blog_11",
+    title: "How to Stay Motivated During Challenging Phases in Business",
+    content: "Personal Development & Leadership",
+  },
+];

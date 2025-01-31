@@ -1,9 +1,13 @@
+import BlogGallery from "@/components/blogComp.tsx/BlogGallery";
 import MostRecentBlog from "@/components/blogComp.tsx/MostRecentBlog";
+import Newsletter from "@/components/blogComp.tsx/Newsletter";
 import {
   BUSINESS_GROWTH_ITEMS,
   ENTREPRENEURSHIP_STARTUP_ITEMS,
   INNOVATION_TECHNOLOGY_ITEMS,
   MOST_RECENT_ITEMS,
+  PERSONAL_DEVELOPMENT_ITEMS,
+  SUCCESS_STORIES_ITEMS,
 } from "@/lib/data";
 import Image from "next/image";
 
@@ -77,6 +81,24 @@ function page() {
           items={INNOVATION_TECHNOLOGY_ITEMS}
         />
       </div>
+      <div className="my-16 md:my-28">
+        <MostRecentBlog
+          linkTitle="View All"
+          links="/business-growth-and-strategy"
+          title="Personal Development & Leadership"
+          items={PERSONAL_DEVELOPMENT_ITEMS}
+        />
+      </div>
+      <div className="my-16 md:my-28">
+        <MostRecentBlog
+          linkTitle="View All"
+          links="/business-growth-and-strategy"
+          title="Success Stories & Case Studies"
+          items={SUCCESS_STORIES_ITEMS}
+        />
+      </div>
+      <Newsletter />
+      <BlogGallery />
     </div>
   );
 }

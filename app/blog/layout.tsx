@@ -33,7 +33,7 @@ function layout({ children }: Props) {
       </div>
       <BlogBanner />
       {children}
-      <div className=" container">
+      <div className="container">
         <Footer />
       </div>
     </div>
