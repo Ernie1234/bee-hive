@@ -28,6 +28,7 @@ const config = {
         "hive-pattern": "url('/images/hive.svg')",
         "aboutHive-pattern": "url('/images/aboutHive.svg')",
         "dots-pattern": "url('/images/Dots.svg')",
+        "programHero-pattern": "url('/images/programs/heroSection.svg')",
       },
       colors: {
         border: "hsl(var(--border))",

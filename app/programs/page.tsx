@@ -39,29 +39,23 @@ function page() {
   return (
     <div className="min-h-dvh font-exo">
       <Navbar />
-      <div className="flex md:flex-row flex-col justify-center items-center p-8 max-h-dvh container">
-        <div className="flex flex-col flex-1 gap-5">
-          <h1 className="font-bold text-2xl text-white">
+      <div className="flex bg-programHero-pattern bg-contain bg-no-repeat bg-right-top w-full">
+        <div className="flex flex-col flex-1 justify-end gap-6 pb-12 md:pb-24 min-h-dvh container ml-8 md:ml-24">
+          <h1 className="font-primary font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-4xl max-w-prose">
             Are you an entrepreneur in Akure with big ideas?
           </h1>
-          <p className="max-w-prose">
+
+          <p className="w-full max-w-prose text-base md:text-2xl">
             The Hive Incubator is your gateway to growth and success. Apply now
             to be part of a community that nurtures creativity, fosters
             innovation, and empowers startups to thrive.
           </p>
+
           <Button className="max-w-fit" variant="hiveYellow" size="lg" asChild>
             <Link href="/business">Join Us</Link>
           </Button>
         </div>
-        <div className="flex-1">
-          <Image
-            src="/images/programs/programsHero.svg"
-            alt="about_hive"
-            className="w-full h-full"
-            width={100}
-            height={100}
-          />
-        </div>
+        <div className="md:block flex-1 hidden"></div>
       </div>
       <div className="flex flex-col gap-8 md:gap-16">
         <div className="flex flex-col container my-8 md:my-16">
