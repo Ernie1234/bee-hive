@@ -54,7 +54,7 @@ function page() {
       <div className="my-16 container">
         <Category />
       </div>
-      <div className="my-16 container">
+      {/* <div className="my-16 container">
         <BigIdeas />
       </div>
       <div className="my-16 container">
@@ -65,7 +65,7 @@ function page() {
       </div>
       <div className="my-16 container">
         <Resilience />
-      </div>
+      </div> */}
       <div className="container">
         <Catalyst />
         <FAQ />

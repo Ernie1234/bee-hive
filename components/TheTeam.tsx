@@ -22,6 +22,11 @@ const featGallery = [
     src: "/images/theTeam/4.svg",
     alt: "Tech Hub 4",
   },
+  {
+    id: 5,
+    src: "/images/theTeam/5.svg",
+    alt: "Tech Hub 4",
+  },
 ];
 
 function TheTeam() {
