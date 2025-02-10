@@ -4,16 +4,16 @@ import React from "react";
 const featGallery = [
   {
     id: 1,
-    src: "/images/communities/coach.svg",
+    src: "/images/communities/1.svg",
     alt: "Tech Hub 1",
-    name: "Adebayo Adekunle",
-    position: "Leadership Coach & CEO, Growth Catalyst, Inc.",
+    name: "ALayi Daniels ",
+    position: "Business Strategy, Management and Consulting",
     description:
-      "A certified leadership coach with over 10 years of experience helping professionals develop critical decision-making skills and achieve their career goals.",
+      "Layi has extensive experience in strategy, management, and consulting across IT, financial services, and health sectors. He has a track record in IT strategy, ERP implementation, and information systems audit.",
   },
   {
     id: 2,
-    src: "/images/communities/coach.svg",
+    src: "/images/communities/2.svg",
     alt: "Tech Hub 2",
     name: "Funke Adesanya",
     position: "Wellness Coach & CEO, Growth Catalyst, Inc.",
@@ -24,11 +24,19 @@ const featGallery = [
     id: 3,
     src: "/images/communities/coach.svg",
     alt: "Tech Hub 3",
+    name: "Segun Adebayo",
+    position: "Business Development & Strategy",
+    description:
+      "Segun is a seasoned business development professional with experience in strategy, business development, and project management across various sectors.",
   },
   {
     id: 4,
     src: "/images/communities/coach.svg",
     alt: "Tech Hub 4",
+    name: "Sanmi Akinpelu",
+    position: "Business Development & Strategy",
+    description:
+      "Sanmi is a seasoned business development professional with experience in strategy, business development, and project management across various sectors.",
   },
 ];
 
@@ -51,10 +59,13 @@ function MentorsCoaches() {
         Meet our experienced coaches and mentors, dedicated to empowering your
         growth and unlocking your potential.
       </p>
-      <div className="flex flex-nowrap overflow-x-scroll no-scroll gap-8 mt-8">
+      <div className="flex flex-nowrap overflow-x-scroll no-scrollbar gap-8 mt-8">
         {featGallery.map((item) => {
           return (
-            <div key={item.id} className="flex items-center gap-4 min-w-96">
+            <div
+              key={item.id}
+              className="flex items-center gap-4 min-w-[45rem]"
+            >
               <Image
                 src={item.src}
                 alt={item.alt}
@@ -62,7 +73,7 @@ function MentorsCoaches() {
                 width={500}
                 height={500}
               />
-              <div className="flex flex-col gap-8 w-full">
+              <div className="flex flex-col gap-8 w-full min-w-80">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-lg font-medium font-primary text-white">
                     {item.name}
