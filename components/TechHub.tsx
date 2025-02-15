@@ -42,6 +42,11 @@ const featGallery = [
     src: "/images/techHub/Kitchen2.svg",
     alt: "Tech Hub 8",
   },
+  {
+    id: 9,
+    src: "/images/techHub/Kitchen3.svg",
+    alt: "Tech Hub 8",
+  },
 ];
 
 function TechHub() {

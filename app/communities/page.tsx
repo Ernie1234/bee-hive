@@ -2,6 +2,7 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import MentorsCoaches from "@/components/MentorsCoaches";
 import Navbar from "@/components/Navbar";
+import PerfectCommunity from "@/components/PerfectCommunity";
 import TechHub from "@/components/TechHub";
 import TheTeam from "@/components/TheTeam";
 import { Button } from "@/components/ui/button";
@@ -27,12 +28,10 @@ function page() {
               Communities
             </h1>
           </div>
-          <h4 className="text-white text-3xl">A Space to Grow, Together</h4>
+          <h4 className="text-white text-3xl">Discover your Tribe</h4>
           <p className="max-w-prose">
-            At The Hive, we host a variety of businesses that are driving
-            innovation across industries. Explore the companies thriving here,
-            all benefiting from our modern facilities and collaborative
-            environment.
+            At The Hive, shared passions unite us. Join a vibrant community
+            tailored to your goals—there’s a place for you to thrive.
           </p>
           <Button variant="hiveYellow" size="lg" className="max-w-fit" asChild>
             <Link href="/business">Explore Communities</Link>
@@ -49,6 +48,8 @@ function page() {
         </div>
       </div>
       <div className="pt-12 md:pt-20"></div>
+
+      <PerfectCommunity />
       <TechHub />
       <TheTeam />
       <MentorsCoaches />
