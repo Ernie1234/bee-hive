@@ -64,7 +64,7 @@ export const Menus = [
         name: "Legal Agreement",
         desc: "legal agreement",
         icon: FaFileContract,
-        link: "/legal",
+        link: "/curriculum",
       },
     ],
     gridCols: 1,

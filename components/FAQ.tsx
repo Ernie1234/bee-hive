@@ -11,7 +11,7 @@ export default function FAQ() {
       <h2 className="font-primary font-semibold text-3xl text-white self-center">
         Frequently asked Question
       </h2>
-      <div className="w-full self-end">
+      <div className="w-full max-w-2xl pr-10 self-end">
         <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>What is The Hive Incubator? </AccordionTrigger>
