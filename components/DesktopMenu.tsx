@@ -1,114 +1,86 @@
 "use client";
 
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
-import { motion } from "framer-motion";
+import * as React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
-// Define types for the submenu and menu
-interface SubMenu {
-  name: string;
-  desc: string;
-  icon?: React.ElementType;
-  link: string;
+import { cn } from "@/lib/utils";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+interface IItems {
+  title: string;
+  href: string;
+  icon: string;
+  hoverIcon: string;
 }
 
-interface Menu {
-  name: string;
-  subMenu?: SubMenu[]; // Optional subMenu
-  subMenuHeading?: string[];
-  gridCols?: number; // Optional grid column count
+interface Props {
+  items: IItems[];
 }
 
-interface DesktopMenuProps {
-  menu: Menu;
-}
-
-const DesktopMenu: React.FC<DesktopMenuProps> = ({ menu }) => {
-  const [isHover, toggleHover] = useState(false);
-  const toggleHoverMenu = () => {
-    toggleHover(!isHover);
-  };
-
-  const subMenuAnimate = {
-    enter: {
-      opacity: 1,
-      rotateX: 0,
-      transition: {
-        duration: 0.5,
-      },
-      display: "block",
-    },
-    exit: {
-      opacity: 0,
-      rotateX: -15,
-      transition: {
-        duration: 0.5,
-      },
-      transitionEnd: {
-        display: "none",
-      },
-    },
-  };
-
-  const hasSubMenu = menu.subMenu?.length ?? 0 > 0; // Default to 0 if undefined
-  const gridCols = menu.gridCols ?? 1; // Default to 1 if undefined
-
+export function DesktopMenu({ items }: Props) {
   return (
-    <motion.li
-      className="group/link"
-      onHoverStart={toggleHoverMenu}
-      onHoverEnd={toggleHoverMenu}
-      key={menu.name}
-    >
-      <span className="flex items-center gap-1 hover:bg-white/5 cursor-pointer px-3 py-1 rounded-xl">
-        {menu.name}
-        {hasSubMenu && (
-          <ChevronDown className="mt-[0.6px] group-hover/link:rotate-180 duration-200" />
-        )}
-      </span>
-      {hasSubMenu && (
-        <motion.div
-          className="sub-menu"
-          initial="exit"
-          animate={isHover ? "enter" : "exit"}
-          variants={subMenuAnimate}
-        >
-          <div
-            className={`grid gap-7 ${
-              gridCols === 3
-                ? "grid-cols-3"
-                : gridCols === 2
-                ? "grid-cols-2"
-                : "grid-cols-1"
-            }`}
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem key={2}>
+          <NavigationMenuTrigger
+            className={cn(
+              "cursor-pointer text-white font-grotesk transition-all duration-300 bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-white"
+            )}
           >
-            {menu.subMenu?.map((submenu, i) => (
-              <div className="relative cursor-pointer" key={i}>
-                {gridCols > 1 && menu.subMenuHeading?.[i] && (
-                  <p className="text-sm mb-4 text-white">
-                    {menu.subMenuHeading[i]}
-                  </p>
-                )}
-                <Link
-                  href={submenu.link}
-                  className="flex items-center gap-x-4 group/menubox"
-                >
-                  <div className="bg-white/5 w-fit p-2 rounded-md group-hover/menubox:bg-white group-hover/menubox:text-gray-900 duration-300">
-                    {submenu.icon && <submenu.icon />}
-                  </div>
-                  <div>
-                    <h6 className="font-semibold">{submenu.name}</h6>
-                    <p className="text-sm white">{submenu.desc}</p>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </motion.div>
-      )}
-    </motion.li>
+            Solutions
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="flex flex-col p-4 bg-slate-700 backdrop-blur-md">
+              {items.map((item) => (
+                <ListItem {...item} key={item.title} />
+              ))}
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
   );
-};
+}
 
-export default DesktopMenu;
+function ListItem({ title, href, hoverIcon, icon }: IItems) {
+  const [hovered, setHovered] = React.useState(false);
+  return (
+    <Link
+      href={href}
+      className="group transition-all duration-500"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      aria-label={title}
+    >
+      <div className="flex gap-6 items-center p-3 rounded-md">
+        {hovered ? (
+          <Image
+            src={hoverIcon}
+            alt={title}
+            width={100}
+            height={100}
+            className="w-12"
+          />
+        ) : (
+          <Image
+            src={icon}
+            alt={title}
+            width={100}
+            height={100}
+            className="w-12"
+          />
+        )}
+        <span className="text-gold group-hover:text-gold-foreground  transition-all duration-500 font-grotesk">
+          {title}
+        </span>
+      </div>
+    </Link>
+  );
+}

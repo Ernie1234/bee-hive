@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BsTiktok, BsWhatsapp } from "react-icons/bs";
 import {
   IoLogoInstagram,
   IoLogoLinkedin,
@@ -22,15 +23,15 @@ export default function Footer() {
               href="https://www.linkedin.com/company/the-hive-incubator/"
               target="_blank"
               rel="noreferrer"
-              className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
             >
               <IoLogoLinkedin size={35} />
             </Link>
             <Link
-              href="https://www.instagram.com/thehive.incubator?igsh=emRnN25pcmhjam5q"
+              href="https://www.instagram.com/p/DGLEyhEN4Yu/?igsh=cnR2bnhjMWV2cWFt"
               target="_blank"
               rel="noreferrer"
-              className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
             >
               <IoLogoInstagram size={35} />
             </Link>
@@ -38,9 +39,25 @@ export default function Footer() {
               href="https://x.com/incubatorhive?s=21&t=pQ4xziLcRY2Dvreppcix0A"
               target="_blank"
               rel="noreferrer"
-              className="text-[#9E9E9E] hover:text-gray-900 dark:hover:text-white"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
             >
               <IoLogoTwitter size={35} />
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@thehivehub.ng?_t=ZM-8tzU9BU9YX7&_r=1"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
+            >
+              <BsTiktok size={35} />
+            </Link>
+            <Link
+              href="https://chat.whatsapp.com/IfoO1ik8FGvE7oXuiioAbk"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
+            >
+              <BsWhatsapp size={35} />
             </Link>
           </div>
           <p>&copy; 5 Hive Incubator. All rights reserved.</p>
@@ -68,7 +85,7 @@ export default function Footer() {
             </a>
           </div>
           <div className="flex flex-col justify-start items-start">
-            <p className="font-semibold text-[#ffba00] text-2xl">Support</p>
+            <p className="font-semibold text-[#ffba00] text-2xl">Location</p>
             <p className="capitalize">The Hive hub behind St. Jacob{"'"}s</p>
             <p className="">Plot.4, 5 Adeloye Oladejo street,</p>
             <p className="">Alagbaka, Akure 340001</p>

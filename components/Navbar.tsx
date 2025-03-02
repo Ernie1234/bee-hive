@@ -8,8 +8,8 @@ import { Button } from "./ui/button";
 
 import { usePathname, useRouter } from "next/navigation";
 import { Menus } from "@/lib/utils";
-import DesktopMenu from "./DesktopMenu";
 import MobMenu from "./MobMenu";
+import { DesktopMenu } from "./DesktopMenu";
 
 interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
   title: string;
@@ -110,9 +110,7 @@ export default function Navbar() {
           </Link>
 
           <ul className="gap-x-1 lg:flex items-center hidden">
-            {Menus.map((menu) => (
-              <DesktopMenu menu={menu} key={menu.name} />
-            ))}
+            <DesktopMenu items={INSIDE_HIVE} />
           </ul>
         </div>
         <div className="flex items-center gap-x-5">
