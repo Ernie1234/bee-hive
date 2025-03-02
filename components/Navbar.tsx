@@ -111,6 +111,9 @@ export default function Navbar() {
 
           <ul className="gap-x-1 lg:flex items-center hidden">
             <DesktopMenu items={INSIDE_HIVE} />
+            <DesktopMenu items={RESOURCES} />
+            <DesktopMenu items={PROGRAMS} />
+            <DesktopMenu items={MEDIA} />
           </ul>
         </div>
         <div className="flex items-center gap-x-5">
