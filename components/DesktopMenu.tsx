@@ -22,9 +22,10 @@ interface IItems {
 
 interface Props {
   items: IItems[];
+  title: string;
 }
 
-export function DesktopMenu({ items }: Props) {
+export function DesktopMenu({ items, title }: Props) {
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -34,7 +35,7 @@ export function DesktopMenu({ items }: Props) {
               "cursor-pointer text-white font-grotesk transition-all duration-300 bg-transparent hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-white"
             )}
           >
-            Solutions
+            {title}
           </NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="flex flex-col p-4 bg-slate-700 backdrop-blur-md">

@@ -9,6 +9,12 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { BsTiktok, BsWhatsapp } from "react-icons/bs";
+import {
+  IoLogoInstagram,
+  IoLogoLinkedin,
+  IoLogoTwitter,
+} from "react-icons/io5";
 
 function page() {
   return (
@@ -33,9 +39,51 @@ function page() {
             At The Hive, shared passions unite us. Join a vibrant community
             tailored to your goals—there’s a place for you to thrive.
           </p>
-          <Button variant="hiveYellow" size="lg" className="max-w-fit" asChild>
+          {/* <Button variant="hiveYellow" size="lg" className="max-w-fit" asChild>
             <Link href="/business">Explore Communities</Link>
-          </Button>
+          </Button> */}
+          <div className="flex gap-4 my-2 sm:mt-0 pt-12">
+            <Link
+              href="https://www.linkedin.com/company/the-hive-incubator/"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
+            >
+              <IoLogoLinkedin size={35} />
+            </Link>
+            <Link
+              href="https://www.instagram.com/p/DGLEyhEN4Yu/?igsh=cnR2bnhjMWV2cWFt"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
+            >
+              <IoLogoInstagram size={35} />
+            </Link>
+            <Link
+              href="https://x.com/incubatorhive?s=21&t=pQ4xziLcRY2Dvreppcix0A"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
+            >
+              <IoLogoTwitter size={35} />
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@thehivehub.ng?_t=ZM-8tzU9BU9YX7&_r=1"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
+            >
+              <BsTiktok size={35} />
+            </Link>
+            <Link
+              href="https://chat.whatsapp.com/IfoO1ik8FGvE7oXuiioAbk"
+              target="_blank"
+              rel="noreferrer"
+              className="text-[#9E9E9E] hover:text-gold-foreground transition-all duration-500 dark:hover:text-white"
+            >
+              <BsWhatsapp size={35} />
+            </Link>
+          </div>
         </div>
         <div className="flex-1">
           <Image

@@ -10,6 +10,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { Menus } from "@/lib/utils";
 import MobMenu from "./MobMenu";
 import { DesktopMenu } from "./DesktopMenu";
+import MenuBar from "./MenuBar";
 
 interface ListItemProps extends React.ComponentPropsWithoutRef<"a"> {
   title: string;
@@ -26,10 +27,28 @@ const INSIDE_HIVE = [
     hoverIcon: "Icons/AboutHover.svg",
   },
   {
-    title: "Team",
+    title: "The Team",
     href: "/team",
     icon: "/Icons/Team.svg",
     hoverIcon: "Icons/TeamHover.svg",
+  },
+  {
+    title: "Communities",
+    href: "/communities",
+    icon: "/Icons/Communities.svg",
+    hoverIcon: "/Icons/Communities.svg",
+  },
+  {
+    title: "The Hub",
+    href: "/hub",
+    icon: "/Icons/TechHub.svg",
+    hoverIcon: "/Icons/TechHub.svg",
+  },
+  {
+    title: "Entrepreneurs",
+    href: "/entrepreneurs",
+    icon: "/Icons/entre.svg",
+    hoverIcon: "/Icons/entre.svg",
   },
 ];
 
@@ -59,6 +78,12 @@ const PROGRAMS = [
     href: "/idea-lab",
     icon: "/Icons/Team.svg",
     hoverIcon: "Icons/TeamHover.svg",
+  },
+  {
+    title: "Launch Lab",
+    href: "/launch-lab",
+    icon: "/Icons/LaunchLab.svg",
+    hoverIcon: "/Icons/LaunchLab.svg",
   },
 ];
 const MEDIA = [
@@ -108,20 +133,20 @@ export default function Navbar() {
               height={100}
             />
           </Link>
-
-          <ul className="gap-x-1 lg:flex items-center hidden">
-            <DesktopMenu items={INSIDE_HIVE} />
-            <DesktopMenu items={RESOURCES} />
-            <DesktopMenu items={PROGRAMS} />
-            <DesktopMenu items={MEDIA} />
-          </ul>
         </div>
+
+        <ul className="gap-x-1 lg:flex items-center hidden">
+          <DesktopMenu items={INSIDE_HIVE} title="Inside the Hive" />
+          <DesktopMenu items={RESOURCES} title="Resources" />
+          <DesktopMenu items={PROGRAMS} title="Programs" />
+          <DesktopMenu items={MEDIA} title="Media" />
+        </ul>
         <div className="flex items-center gap-x-5">
           <Button variant="hiveYellow">
             <Link href="/contact">Join us</Link>
           </Button>
-          <div className="lg:hidden">
-            <MobMenu Menus={Menus} />
+          <div className="block lg:hidden">
+            <MenuBar />
           </div>
         </div>
       </div>
