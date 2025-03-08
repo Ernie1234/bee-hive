@@ -6,7 +6,7 @@ const featGallery = [
     id: 1,
     src: "/images/communities/1.svg",
     alt: "Tech Hub 1",
-    name: "ALayi Daniels ",
+    name: "Layi Daniels ",
     position: "Business Strategy, Management and Consulting",
     description:
       "Layi has extensive experience in strategy, management, and consulting across IT, financial services, and health sectors. He has a track record in IT strategy, ERP implementation, and information systems audit.",
@@ -15,28 +15,38 @@ const featGallery = [
     id: 2,
     src: "/images/communities/2.svg",
     alt: "Tech Hub 2",
-    name: "Funke Adesanya",
+    name: "Ore Omotayo",
     position: "Wellness Coach & CEO, Growth Catalyst, Inc.",
     description:
       "An experienced wellness coach passionate about supporting individuals in achieving work-life balance and personal fulfillment.",
   },
   {
     id: 3,
-    src: "/images/communities/coach.svg",
+    src: "/images/communities/Sanmi Olukanmi.jfif",
     alt: "Tech Hub 3",
-    name: "Segun Adebayo",
-    position: "Business Development & Strategy",
+    name: "Sanmi Olukanmi",
+    position: "CEO and Co-Founder, Shekel Mobility (YC W23) | Investor",
     description:
-      "Segun is a seasoned business development professional with experience in strategy, business development, and project management across various sectors.",
+      "Sanmi is an experienced founder with a demonstrated history of working in the automotive industry, E-commerce and Strategic sourcing. Sanmi is the founder of Shekel mobility and Easypapers Technologies. He is also a Venture partner at Pioneer fund.",
   },
   {
     id: 4,
-    src: "/images/communities/coach.svg",
+    src: "/images/communities/Segun Allen.jfif",
     alt: "Tech Hub 4",
-    name: "Sanmi Akinpelu",
-    position: "Business Development & Strategy",
+    name: "Segun Allen",
+    position: "Innovator | Entrepreneur",
     description:
-      "Sanmi is a seasoned business development professional with experience in strategy, business development, and project management across various sectors.",
+      "Segun has a track record of top-rated delivery on diverse multi-million dollar projects cutting across diverse sectors in various world regions including Africa, Europe and North America. He has worked with Clockwork recruiting (Los Angeles), Hexad Gmbh (Munich), and Venture Garden Group (Lagos).",
+  },
+  {
+    id: 5,
+    src: "/images/communities/Samuel Solomon Utoh.jpg",
+    alt: "Tech Hub 4",
+    name: "Samuel Solomon Utoh",
+    position:
+      "Startup Investor | Private Equity & Venture Capital | Investment Banking",
+    description:
+      "Samuel is an expert in quantitative analysis, risk management, and financial data interpretation. He excels in evaluating investments, strategic policy implementation, and financial modeling for optimal portfolio performance. He advises institutions on market trends, offering strategies for profitability and stability.",
   },
 ];
 
