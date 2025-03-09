@@ -40,7 +40,7 @@ const featGallery = [
   },
   {
     id: 5,
-    src: "/images/communities/Samuel Solomon Utoh.jpg",
+    src: "/images/communities/Samuel Solomon Utoh.svg",
     alt: "Tech Hub 4",
     name: "Samuel Solomon Utoh",
     position:
@@ -69,7 +69,7 @@ function MentorsCoaches() {
         Meet our experienced coaches and mentors, dedicated to empowering your
         growth and unlocking your potential.
       </p>
-      <div className="flex flex-nowrap overflow-x-scroll no-scrollbar gap-8 mt-8">
+      <div className="flex flex-nowrap overflow-x-scroll  gap-8 mt-8">
         {featGallery.map((item) => {
           return (
             <div

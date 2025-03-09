@@ -146,3 +146,23 @@
     scrollbar-width: none; /* Firefox */
   }
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-gold-foreground;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gold rounded-[5px];
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gold/80;
+}

@@ -55,13 +55,13 @@ const INSIDE_HIVE = [
 const RESOURCES = [
   {
     title: "Curriculum",
-    href: "/resources",
+    href: "/curriculum",
     icon: "/Icons/About.svg",
     hoverIcon: "Icons/AboutHover.svg",
   },
   {
     title: "Legal Agreement",
-    href: "/resources",
+    href: "/curriculum",
     icon: "/Icons/Team.svg",
     hoverIcon: "Icons/TeamHover.svg",
   },
